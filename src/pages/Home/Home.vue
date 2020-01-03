@@ -5,9 +5,9 @@
         <div class="header-top">
           <img @click="$router.push('/category')" class="img1" src="https://image2.suning.cn/uimg/cms/img/157199320847433454.png" alt="category">
           <img class="img2" src="https://image1.suning.cn/uimg/cms/img/157734413513115783.gif" alt="header2">
-          <img @click="$router.push('/personal')" class="img1" src="https://image1.suning.cn/uimg/cms/img/157199321817918653.png" alt="personal">
+          <img @click="$router.replace('/login')" class="img1" src="https://image1.suning.cn/uimg/cms/img/157199321817918653.png" alt="personal">
         </div>
-        <div class="header-bottom">
+        <div class="header-bottom" @click="$router.push('/search')">
           <i class="iconfont icon-RectangleCopy"></i>
           <p>商品/店铺</p>
         </div>
@@ -50,7 +50,7 @@
       <!-- 首页十个导航 -->
       <div class="categoryContainer">
         <ul class="categoryUl">
-          <li v-for="(item,index) in cate" :key="index">
+          <li v-for="(item,index) in cate" :key="index" @click="goCate(index)">
             <img :src="item.picUrl" alt="">
             <p>{{item.elementName}}</p>
           </li>
@@ -72,14 +72,14 @@
     <!-- 下拉到指定位置的头部 -->
     <div v-show="scrolly>=700" class="scroll-header">
       <div class="imgl">
-        <img @click="$router.push('/category')" class="imgl" src="https://image2.suning.cn/uimg/cms/img/157199320847433454.png" alt="category">
+        <img @click="$router.replace('/category')" class="imgl" src="https://image2.suning.cn/uimg/cms/img/157199320847433454.png" alt="category">
       </div>
-      <div class="center">
+      <div class="center" @click="$router.push('/search')">
         <i class="iconfont icon-RectangleCopy"></i>
         <span>蓝月亮</span>
       </div>
       <div class="imgr">
-        <img @click="$router.push('/personal')" class="imgr" src="https://image1.suning.cn/uimg/cms/img/157199321817918653.png" alt="personal">
+        <img @click="$router.replace('/login')" class="imgr" src="https://image1.suning.cn/uimg/cms/img/157199321817918653.png" alt="personal">
       </div>
     </div>
     <!-- 置顶 -->
@@ -121,23 +121,34 @@
         },
         loop: true
       })
+      if (this.cate.length>0) {
+        this.initScroll()
+      }
     },
     methods:{
       initScroll(){
-        console.log('scroll');
-        this.homeScroll = new BScroll('.wrapper',{
-          click:true,
-          probeType:3,
-          bounce:false,
-          mouseWheel:true
-        })
-        this.homeScroll.on('scroll',({x,y})=>{
-          this.scrolly = Math.abs(y)
-        })
+        if (!this.homeScroll) {
+          console.log('scroll');
+          this.homeScroll = new BScroll('.wrapper',{
+            click:true,
+            probeType:3,
+            bounce:false,
+            mouseWheel:true
+          })
+          this.homeScroll.on('scroll',({x,y})=>{
+            this.scrolly = Math.abs(y)
+          })
+        }else{
+          console.log('ref');
+          this.homeScroll.refresh()
+        }
       },
       gotoTop(){
         this.homeScroll.scrollTo(0,0,0)
-      } 
+      },
+      goCate(index){
+        this.$router.push(`/home/money/${index}`)
+      }
     },
     watch:{
       cate(){
@@ -157,8 +168,9 @@
       .header
         width 100%
         height 90px
-        background-image url('https://image3.suning.cn/uimg/cms/img/157745204162934282.png')
-        background-size 100% 90px
+        background-color #DC0024
+        // background-image url('https://image3.suning.cn/uimg/cms/img/157745204162934282.png')
+        // background-size 100% 90px
         position relative
         z-index 9
         .header-top

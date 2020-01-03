@@ -31,14 +31,11 @@ import Category from '../pages/category/category.vue'
 import Home from '../pages/Home/Home.vue'
 import Profile from '../pages/profile/profile.vue'
 import Setup from '../pages/SetUp/SetUp.vue'
-// import ShopCar from '../pages/shopCar/ShopCart.vue'
 import ShopCart from '../pages/ShopCart/ShopCart.vue'
 import Login from '../pages/Login/login.vue'
 
 import Centre from '../pages/CouponCentre/centre.vue'
-
-
-
+import Profit from '../pages/profit/recommend.vue'
 
 export default [
     {
@@ -49,8 +46,12 @@ export default [
         },
         children:[
             {
+                path:'/home/money',
+                component:Profit
+            },
+            {
                 path:'/home/centre',
-                component:Centre,   
+                component:Centre
             }
         ]
     },
