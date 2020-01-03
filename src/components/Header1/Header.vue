@@ -2,14 +2,14 @@
   <!-- 赚钱头部 -->
   <div class="header">
     <!-- 个性推荐 -->
-    <div class="header-left" :class="{active:$route.path === '/recommend'}" @click="goto('/recommend')">
+    <div class="header-left" :class="{active:isShowRecommend}" @click="goto('/recommend')">
       <span>个性推荐</span>
-      <div class="line" v-show="$route.path === '/recommend'"></div>
+      <div class="line" v-show="isShowRecommend"></div>
     </div>
     <!-- 财富秘籍 -->
-    <div class="header-right" :class="{active:$route.path === '/wealth'}"  @click="goto('/wealth')">
+    <div class="header-right" :class="{active:!isShowRecommend}"  @click="goto('/recommend')">
       <span>财富秘籍</span>
-      <div class="line" v-show="$route.path === '/wealth'"></div>
+      <div class="line" v-show="!isShowRecommend"></div>
       <img class="hot" src="./images/hot.png" alt="">
     </div>
   </div>
@@ -17,14 +17,20 @@
 
 <script type="text/ecmascript-6">
   export default {
+    data(){
+      return {
+        isShowRecommend:true
+      }
+    },
     methods:{
       goto(path){
         //如果点击当前项,刷新界面
-        if (path!==this.$route.path) {
-          this.$router.replace(path)
-        }else{
-          window.location = path  //发送一般的http请求,整个页面会刷新
-        }
+        // if (path!==this.$route.path) {
+        //   this.$router.replace(path)
+        // }else{
+        //   window.location = path  //发送一般的http请求,整个页面会刷新
+        // }
+        this.isShowRecommend = !this.isShowRecommend
       }
     }
   }
