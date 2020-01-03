@@ -114,7 +114,7 @@
           },
           pagination:{
             el:'.swiper-pagination',
-            type:'custom'
+            // type:'custom'
           }
         })
         new Swiper(this.$refs.lunbo2,{
@@ -132,10 +132,10 @@
           new BScroll(this.$refs.bank,{
             click:true,
             scrollX:true,
-            snap: {
-              loop: true,
-              threshold: 0.1,
-            }
+            // snap: {
+            //   loop: true,
+            //   threshold: 0.1,
+            // }
           })
         })
       }
@@ -154,9 +154,12 @@
       overflow hidden
       height 120px
       margin-top 60px
+      --swiper-theme-color #fff
       img 
         width 100%
         height 100%
+				
+			
   
     // 导航
     .navContainer

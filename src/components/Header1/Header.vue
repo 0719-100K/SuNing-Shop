@@ -37,7 +37,6 @@
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-  @import '../../common/stylus/mixins.styl'
     
   // 头部
   .header
@@ -51,7 +50,13 @@
     background white
     padding 0 16px
     .header-left
-      header()
+      width 56px
+      height 60px
+      margin-right 20px
+      text-align center
+      line-height 60px
+      font-size 14px
+      color #666
       position relative
       .line
         width 72px
@@ -61,7 +66,13 @@
         top 50%
         margin-top 5px
     .header-right
-      header()
+      width 56px
+      height 60px
+      margin-right 20px
+      text-align center
+      line-height 60px
+      font-size 14px
+      color #666
       position relative
       .line
         width 72px
