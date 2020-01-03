@@ -1,0 +1,1382 @@
+[
+    {
+        "SQ_header": {
+            "elementShowNumber": 1,
+            "elementType": 2,
+            "modelFullCode": "SQ_header",
+            "modelFullId": 33151,
+            "modelId": 8018,
+            "nodes": [
+                {
+                    "elementShowNumber": 1,
+                    "elementType": 0,
+                    "modelFullCode": "SQ_headertitle",
+                    "modelFullId": 33152,
+                    "modelId": 8018,
+                    "pmodelFullId": 33151,
+                    "sequence": 1,
+                    "tag": [
+                        {
+                            "color": "",
+                            "elementDesc": "",
+                            "elementName": "频道广场",
+                            "elementType": 0,
+                            "linkType": 4,
+                            "linkUrl": "",
+                            "modelFullId": 33152,
+                            "sequence": 1,
+                            "templateFullId": 1216687,
+                            "trickPoint": "newwap_channelNSQ_121668733152_word01"
+                        }
+                    ]
+                }
+            ],
+            "pmodelFullId": 0,
+            "sequence": 1,
+            "tag": [
+                {
+                    "color": "",
+                    "elementDesc": "#FF9900",
+                    "elementName": "#FF9900",
+                    "elementType": 2,
+                    "linkType": -3,
+                    "linkUrl": "",
+                    "modelFullId": 33151,
+                    "picUrl": "/uimg/cms/img/156224565564159431.png",
+                    "productSpecialFlag": "",
+                    "sequence": 1,
+                    "templateFullId": 1216687,
+                    "trickPoint": "newwap_channelNSQ_121668733151_pic01"
+                }
+            ]
+        }
+    },
+    {
+        "SQ_myfo": {
+            "elementShowNumber": 1,
+            "elementType": 2,
+            "modelFullCode": "SQ_myfo",
+            "modelFullId": 33154,
+            "modelId": 8020,
+            "nodes": [
+                {
+                    "elementShowNumber": 1,
+                    "elementType": 0,
+                    "modelFullCode": "SQ_myfo_code",
+                    "modelFullId": 33155,
+                    "modelId": 8020,
+                    "pmodelFullId": 33154,
+                    "sequence": 1,
+                    "tag": [
+                        {
+                            "color": "",
+                            "elementDesc": "",
+                            "elementName": "0001",
+                            "elementType": 0,
+                            "linkType": 4,
+                            "linkUrl": "",
+                            "modelFullId": 33155,
+                            "sequence": 1,
+                            "templateFullId": 1216689,
+                            "trickPoint": "newwap_channelNSQ_121668933155_word01"
+                        }
+                    ]
+                },
+                {
+                    "elementShowNumber": 1,
+                    "elementType": 0,
+                    "modelFullCode": "SQ_myfo_sort",
+                    "modelFullId": 33156,
+                    "modelId": 8020,
+                    "pmodelFullId": 33154,
+                    "sequence": 2,
+                    "tag": [
+                        {
+                            "color": "",
+                            "elementDesc": "",
+                            "elementName": "1",
+                            "elementType": 0,
+                            "linkType": 4,
+                            "linkUrl": "",
+                            "modelFullId": 33156,
+                            "sequence": 1,
+                            "templateFullId": 1216689,
+                            "trickPoint": "newwap_channelNSQ_121668933156_word01"
+                        }
+                    ]
+                },
+                {
+                    "elementShowNumber": 1,
+                    "elementType": 2,
+                    "modelFullCode": "SQ_myfo_bg",
+                    "modelFullId": 33157,
+                    "modelId": 8020,
+                    "pmodelFullId": 33154,
+                    "sequence": 3,
+                    "tag": [
+                        {
+                            "color": "",
+                            "elementDesc": "",
+                            "elementName": "默认图",
+                            "elementType": 2,
+                            "linkType": -3,
+                            "linkUrl": "",
+                            "modelFullId": 33157,
+                            "picUrl": "/uimg/cms/img/156212580799717633.png",
+                            "productSpecialFlag": "",
+                            "sequence": 1,
+                            "templateFullId": 1216689,
+                            "trickPoint": "newwap_channelNSQ_121668933157_pic01"
+                        }
+                    ]
+                }
+            ],
+            "pmodelFullId": 0,
+            "sequence": 1,
+            "tag": [
+                {
+                    "color": "",
+                    "elementDesc": "",
+                    "elementName": "我的关注",
+                    "elementType": 2,
+                    "linkType": -3,
+                    "linkUrl": "",
+                    "modelFullId": 33154,
+                    "picUrl": "/uimg/cms/img/156212578619419676.png",
+                    "productSpecialFlag": "",
+                    "sequence": 1,
+                    "templateFullId": 1216689,
+                    "trickPoint": "newwap_channelNSQ_121668933154_pic01"
+                }
+            ]
+        }
+    },
+    {
+        "SQ_recch": {
+            "elementShowNumber": 1,
+            "elementType": 2,
+            "modelFullCode": "SQ_recch",
+            "modelFullId": 33158,
+            "modelId": 8021,
+            "nodes": [
+                {
+                    "elementShowNumber": 1,
+                    "elementType": 0,
+                    "modelFullCode": "rec_snpm",
+                    "modelFullId": 33159,
+                    "modelId": 8021,
+                    "pmodelFullId": 33158,
+                    "sequence": 1,
+                    "tag": [
+                        {
+                            "color": "",
+                            "elementDesc": "",
+                            "elementName": "1",
+                            "elementType": 0,
+                            "linkType": 4,
+                            "linkUrl": "",
+                            "modelFullId": 33159,
+                            "sequence": 1,
+                            "templateFullId": 1216690,
+                            "trickPoint": "newwap_channelNSQ_121669033159_word01"
+                        }
+                    ]
+                }
+            ],
+            "pmodelFullId": 0,
+            "sequence": 1,
+            "tag": [
+                {
+                    "color": "",
+                    "elementDesc": "",
+                    "elementName": "推荐频道",
+                    "elementType": 2,
+                    "linkType": -3,
+                    "linkUrl": "",
+                    "modelFullId": 33158,
+                    "picUrl": "/uimg/cms/img/156212584415170059.png",
+                    "productSpecialFlag": "",
+                    "sequence": 1,
+                    "templateFullId": 1216690,
+                    "trickPoint": "newwap_channelNSQ_121669033158_pic01"
+                }
+            ]
+        }
+    },
+    {
+        "SQ_anchor": {
+            "elementShowNumber": 20,
+            "elementType": 0,
+            "modelFullCode": "SQ_anchor",
+            "modelFullId": 33145,
+            "modelId": 8014,
+            "pmodelFullId": 0,
+            "sequence": 1,
+            "tag": [
+                {
+                    "color": "",
+                    "elementDesc": "",
+                    "elementName": "热门频道",
+                    "elementType": 0,
+                    "linkType": 4,
+                    "linkUrl": "",
+                    "modelFullId": 33145,
+                    "sequence": 1,
+                    "templateFullId": 1216691,
+                    "trickPoint": "newwap_channelNSQ_121669133145_word01"
+                },
+                {
+                    "color": "",
+                    "elementDesc": "",
+                    "elementName": "特色营销",
+                    "elementType": 0,
+                    "linkType": 4,
+                    "linkUrl": "",
+                    "modelFullId": 33145,
+                    "sequence": 2,
+                    "templateFullId": 1216691,
+                    "trickPoint": "newwap_channelNSQ_121669133145_word02"
+                },
+                {
+                    "color": "",
+                    "elementDesc": "",
+                    "elementName": "我的苏宁",
+                    "elementType": 0,
+                    "linkType": 4,
+                    "linkUrl": "",
+                    "modelFullId": 33145,
+                    "sequence": 3,
+                    "templateFullId": 1216691,
+                    "trickPoint": "newwap_channelNSQ_121669133145_word03"
+                },
+                {
+                    "color": "",
+                    "elementDesc": "",
+                    "elementName": "生活服务",
+                    "elementType": 0,
+                    "linkType": 4,
+                    "linkUrl": "",
+                    "modelFullId": 33145,
+                    "sequence": 4,
+                    "templateFullId": 1216691,
+                    "trickPoint": "newwap_channelNSQ_121669133145_word04"
+                },
+                {
+                    "color": "",
+                    "elementDesc": "",
+                    "elementName": "财富中心",
+                    "elementType": 0,
+                    "linkType": 4,
+                    "linkUrl": "",
+                    "modelFullId": 33145,
+                    "sequence": 5,
+                    "templateFullId": 1216691,
+                    "trickPoint": "newwap_channelNSQ_121669133145_word05"
+                }
+            ]
+        }
+    },
+    {
+        "SQ_ch": {
+            "elementShowNumber": 1,
+            "elementType": 2,
+            "modelFullCode": "SQ_ch",
+            "modelFullId": 33146,
+            "modelId": 8015,
+            "nodes": [
+                {
+                    "elementShowNumber": 20,
+                    "elementType": 93,
+                    "modelFullCode": "SQ_ch_i",
+                    "modelFullId": 33147,
+                    "modelId": 8015,
+                    "pmodelFullId": 33146,
+                    "sequence": 1,
+                    "tag": [
+                        {
+                            "color": "",
+                            "elementDesc": "在意你每部手机",
+                            "elementName": "爆款手机",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "http://m.suning.com/?adTypeCode=1163&adId="
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/phone2019.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326594623680933.png",
+                            "productSpecialFlag": "1000000110021002",
+                            "sequence": 1,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic01"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "换5G上苏宁",
+                            "elementName": "5G手机",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "http://m.suning.com/index?adTypeCode=100013&adId=http://snmps.suning.com/snmps-web/program/get_8bcd1cb998f446dba637661e6430878c_{currVersion}_0_{clientVersion}.htm&webUrl=https://c.m.suning.com/5GTime.html"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/5GTime.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/157113353377544464.png",
+                            "productSpecialFlag": "",
+                            "sequence": 2,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic02"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "为你挑好的",
+                            "elementName": "苏宁超市",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://c.m.suning.com/710home.html?adTypeCode=1196&adId="
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/newcshome.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326601911411622.png",
+                            "productSpecialFlag": "1000000410021002",
+                            "sequence": 3,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic03"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "快享全球好货",
+                            "elementName": "苏宁国际",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://m.suning.com?adTypeCode=1150"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://g.m.suning.com/oversea.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326613124569727.png",
+                            "productSpecialFlag": "1000001810021002",
+                            "sequence": 4,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic04"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "9.9元抢好货",
+                            "elementName": "生活家电",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://m.suning.com/?adTypeCode=380007&adId="
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/shjdsm.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326639316924440.png",
+                            "productSpecialFlag": "1000000310021002",
+                            "sequence": 5,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic05"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "买家电上苏宁",
+                            "elementName": "苏宁家电",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://m.suning.com/?adTypeCode=1170&adId="
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/jd_home.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326648332424165.png",
+                            "productSpecialFlag": "1000000510021002",
+                            "sequence": 6,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic06"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "精选全球生鲜",
+                            "elementName": "苏宁生鲜",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://m.suning.com/?adTypeCode=380006"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/Freshindex.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326773978727186.png",
+                            "productSpecialFlag": "",
+                            "sequence": 7,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic07"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "致敬美好生活",
+                            "elementName": "苏宁极物",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://pindao.suning.com/snjw64.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326632280629553.png",
+                            "productSpecialFlag": "1000001910021002",
+                            "sequence": 8,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic08"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "品质服饰为你挑选",
+                            "elementName": "时尚服饰",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/newfspd.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326672806196268.png",
+                            "productSpecialFlag": "1000001510021002",
+                            "sequence": 9,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic09"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "精选智能好货",
+                            "elementName": "Biu+优品",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://c.m.suning.com/Biu_home785.html"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/Biu_home785.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326624862372187.png",
+                            "productSpecialFlag": "1000001210021002",
+                            "sequence": 10,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic10"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "妈妈放心购",
+                            "elementName": "母婴玩具",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "http://m.suning.com/?adTypeCode=311253"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/muying2018.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326606906353706.png",
+                            "productSpecialFlag": "1000001710021002",
+                            "sequence": 11,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic11"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "健康从运动开始",
+                            "elementName": "运动户外",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/sntysports.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326778795377202.png",
+                            "productSpecialFlag": "",
+                            "sequence": 12,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic12"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "专业购机顾问",
+                            "elementName": "电脑办公",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://cuxiao.m.suning.com/newdiannao.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326677608642853.png",
+                            "productSpecialFlag": "",
+                            "sequence": 13,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic13"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "一站式购车服务",
+                            "elementName": "苏宁汽车",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "http://m.suning.com/index?adTypeCode=100013&adId=http://snmps.suning.com/snmps-web/program/get_165666ceaedc47e7b32191ecec119369_{currVersion}_0_{clientVersion}.htm&webUrl=http://car.suning.com/gather.html"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://car.suning.com/gather.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326793283673127.png",
+                            "productSpecialFlag": "",
+                            "sequence": 14,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic14"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "科技数码",
+                            "elementName": "智能数码",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/zhinengshuma2019.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/157550862913803153.png",
+                            "productSpecialFlag": "",
+                            "sequence": 15,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic15"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "源产地传承",
+                            "elementName": "中华特色馆",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/newzhtsg.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156352833213258248.png",
+                            "productSpecialFlag": "",
+                            "sequence": 16,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic16"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "买好酒上苏宁",
+                            "elementName": "苏宁好酒",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "http://m.suning.com/?adTypeCode=1195&adId=1"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/71jyzx.html?tabIndex=1",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/157061041450337278.png",
+                            "productSpecialFlag": "",
+                            "sequence": 17,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic17"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "品质焕新家",
+                            "elementName": "家装建材",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/jzpd.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/157119780847581254.png",
+                            "productSpecialFlag": "",
+                            "sequence": 18,
+                            "templateFullId": 1219498,
+                            "trickPoint": "newwap_channelNSQ_121949833147_pic18"
+                        }
+                    ]
+                }
+            ],
+            "pmodelFullId": 0,
+            "sequence": 1,
+            "tag": [
+                {
+                    "color": "",
+                    "elementDesc": "",
+                    "elementName": "热门频道",
+                    "elementType": 2,
+                    "linkType": -3,
+                    "linkUrl": "",
+                    "modelFullId": 33146,
+                    "picUrl": "/uimg/cms/img/156326589583326666.png",
+                    "productSpecialFlag": "",
+                    "sequence": 1,
+                    "templateFullId": 1219498,
+                    "trickPoint": "newwap_channelNSQ_121949833146_pic01"
+                }
+            ]
+        }
+    },
+    {
+        "SQ_ch": {
+            "elementShowNumber": 1,
+            "elementType": 2,
+            "modelFullCode": "SQ_ch",
+            "modelFullId": 33146,
+            "modelId": 8015,
+            "nodes": [
+                {
+                    "elementShowNumber": 20,
+                    "elementType": 93,
+                    "modelFullCode": "SQ_ch_i",
+                    "modelFullId": 33147,
+                    "modelId": 8015,
+                    "pmodelFullId": 33146,
+                    "sequence": 1,
+                    "tag": [
+                        {
+                            "color": "",
+                            "elementDesc": "海量商品等你抢",
+                            "elementName": "限时抢购",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://ju.m.suning.com/wap/palmrob/outerInit_0_0.htm?adTypeCode=1135&adId=1_0_"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/channel/newZsq.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326876391440581.png",
+                            "productSpecialFlag": "",
+                            "sequence": 1,
+                            "templateFullId": 1219499,
+                            "trickPoint": "newwap_channelNSQ_121949933147_pic01"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "拼着买更实惠",
+                            "elementName": "苏宁拼购",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://c.m.suning.com/group_index.html?adTypeCode=1164&adId=4"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/group_index.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326880554464984.png",
+                            "productSpecialFlag": "",
+                            "sequence": 2,
+                            "templateFullId": 1219499,
+                            "trickPoint": "newwap_channelNSQ_121949933147_pic02"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "您的专属特卖",
+                            "elementName": "Outlets",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "http://ju.m.suning.com/?adTypeCode=1186&adId=1"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://temai.m.suning.com",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326888277045986.png",
+                            "productSpecialFlag": "",
+                            "sequence": 3,
+                            "templateFullId": 1219499,
+                            "trickPoint": "newwap_channelNSQ_121949933147_pic03"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "先领券再购物",
+                            "elementName": "领券中心",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "http://m.suning.com?adTypeCode=1177"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://res.m.suning.com/project/quan/dist/lqwap_5.html#/type/1",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326892974745626.png",
+                            "productSpecialFlag": "",
+                            "sequence": 4,
+                            "templateFullId": 1219499,
+                            "trickPoint": "newwap_channelNSQ_121949933147_pic04"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "大牌上新优先试",
+                            "elementName": "新品首发",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://m.suning.com/?adTypeCode=100013&adId=http://snmps.suning.com/snmps-web/program/get_92745d9653c64a58a32dcc86fc2c87af_{currVersion}_0_{clientVersion}.htm&webUrl=https://c.m.suning.com/xpsf719.html"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/xpsf719.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326902619181055.png",
+                            "productSpecialFlag": "",
+                            "sequence": 5,
+                            "templateFullId": 1219499,
+                            "trickPoint": "newwap_channelNSQ_121949933147_pic05"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "正品二手",
+                            "elementName": "二手优品",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://m.suning.com/?adTypeCode=1137&adId=https://2.suning.com/project/shp/js/weex/indexwx.min.js&&adIdParam1=https://2.m.suning.com/shp_wap_ind.htm"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://fe.suning.com/recycling/m/index.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326910203296648.png",
+                            "productSpecialFlag": "",
+                            "sequence": 6,
+                            "templateFullId": 1219499,
+                            "trickPoint": "newwap_channelNSQ_121949933147_pic06"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "一站式采购平台",
+                            "elementName": "企业采购",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/SNqy.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326913301339734.png",
+                            "productSpecialFlag": "",
+                            "sequence": 7,
+                            "templateFullId": 1219499,
+                            "trickPoint": "newwap_channelNSQ_121949933147_pic07"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "闲置高价回收",
+                            "elementName": "以旧换新",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://hx.m.suning.com/wap/home.htm",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/157681350930748105.png",
+                            "productSpecialFlag": "",
+                            "sequence": 8,
+                            "templateFullId": 1219499,
+                            "trickPoint": "newwap_channelNSQ_121949933147_pic08"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "学生会员专享",
+                            "elementName": "苏宁校园",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/sch_channel.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156326963823073217.png",
+                            "productSpecialFlag": "",
+                            "sequence": 9,
+                            "templateFullId": 1219499,
+                            "trickPoint": "newwap_channelNSQ_121949933147_pic09"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "品质好物指南",
+                            "elementName": "苏宁好货",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "http://m.suning.com/?adTypeCode=1178"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://m.suning.com/?adTypeCode=1178",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156932689292911484.png",
+                            "productSpecialFlag": "",
+                            "sequence": 10,
+                            "templateFullId": 1219499,
+                            "trickPoint": "newwap_channelNSQ_121949933147_pic10"
+                        }
+                    ]
+                }
+            ],
+            "pmodelFullId": 0,
+            "sequence": 1,
+            "tag": [
+                {
+                    "color": "",
+                    "elementDesc": "",
+                    "elementName": "特色营销",
+                    "elementType": 2,
+                    "linkType": -3,
+                    "linkUrl": "",
+                    "modelFullId": 33146,
+                    "picUrl": "/uimg/cms/img/156326869642752888.png",
+                    "productSpecialFlag": "",
+                    "sequence": 1,
+                    "templateFullId": 1219499,
+                    "trickPoint": "newwap_channelNSQ_121949933146_pic01"
+                }
+            ]
+        }
+    },
+    {
+        "SQ_ch": {
+            "elementShowNumber": 1,
+            "elementType": 2,
+            "modelFullCode": "SQ_ch",
+            "modelFullId": 33146,
+            "modelId": 8015,
+            "nodes": [
+                {
+                    "elementShowNumber": 20,
+                    "elementType": 93,
+                    "modelFullCode": "SQ_ch_i",
+                    "modelFullId": 33147,
+                    "modelId": 8015,
+                    "pmodelFullId": 33146,
+                    "sequence": 1,
+                    "tag": [
+                        {
+                            "color": "",
+                            "elementDesc": "尊享会员",
+                            "elementName": "SUPER会员",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://supervip.suning.com/snprime-web/m/toIndex.do"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://supervip.suning.com/snprime-web/m/toIndex.do",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156282549435711063.png",
+                            "productSpecialFlag": "",
+                            "sequence": 1,
+                            "templateFullId": 1216697,
+                            "trickPoint": "newwap_channelNSQ_121669733147_pic01"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "专属收藏",
+                            "elementName": "商品收藏",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://m.suning.com?adTypeCode=1158"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://m.suning.com?adTypeCode=1158",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156282555280688403.png",
+                            "productSpecialFlag": "",
+                            "sequence": 2,
+                            "templateFullId": 1216697,
+                            "trickPoint": "newwap_channelNSQ_121669733147_pic02"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "免费试用",
+                            "elementName": "0元试用",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://c.m.suning.com/snsy.html"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/snsy.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156282558879766375.png",
+                            "productSpecialFlag": "",
+                            "sequence": 3,
+                            "templateFullId": 1216697,
+                            "trickPoint": "newwap_channelNSQ_121669733147_pic03"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "爱心助力",
+                            "elementName": "苏宁公益",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://gongyi.suning.com/n_gyMobileHome.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/157500939398668424.png",
+                            "productSpecialFlag": "",
+                            "sequence": 4,
+                            "templateFullId": 1216697,
+                            "trickPoint": "newwap_channelNSQ_121669733147_pic04"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "云钻乐园",
+                            "elementName": "云钻竞猜",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://cuxiao.m.suning.com/scms/yzjccopy.html"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://cuxiao.m.suning.com/scms/yzjccopy.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156282581793434113.png",
+                            "productSpecialFlag": "",
+                            "sequence": 5,
+                            "templateFullId": 1216697,
+                            "trickPoint": "newwap_channelNSQ_121669733147_pic05"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "售后无忧",
+                            "elementName": "退换货",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://snasss.suning.com/snass-web/wap/servicefusion/goReturnChangeList_1.do",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156333030011347473.png",
+                            "productSpecialFlag": "",
+                            "sequence": 6,
+                            "templateFullId": 1216697,
+                            "trickPoint": "newwap_channelNSQ_121669733147_pic06"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "建议反馈",
+                            "elementName": "问题反馈",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://ueip.suning.com/wap/index.htm",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156333047957553424.png",
+                            "productSpecialFlag": "",
+                            "sequence": 7,
+                            "templateFullId": 1216697,
+                            "trickPoint": "newwap_channelNSQ_121669733147_pic07"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "专属导购",
+                            "elementName": "智能导购",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://m.suning.com?adTypeCode=1203"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://m.suning.com?adTypeCode=1203",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156282565191510266.png",
+                            "productSpecialFlag": "",
+                            "sequence": 8,
+                            "templateFullId": 1216697,
+                            "trickPoint": "newwap_channelNSQ_121669733147_pic08"
+                        }
+                    ]
+                }
+            ],
+            "pmodelFullId": 0,
+            "sequence": 1,
+            "tag": [
+                {
+                    "color": "",
+                    "elementDesc": "",
+                    "elementName": "我的苏宁",
+                    "elementType": 2,
+                    "linkType": -3,
+                    "linkUrl": "",
+                    "modelFullId": 33146,
+                    "picUrl": "/uimg/cms/img/156282540494095567.png",
+                    "productSpecialFlag": "",
+                    "sequence": 1,
+                    "templateFullId": 1216697,
+                    "trickPoint": "newwap_channelNSQ_121669733146_pic01"
+                }
+            ]
+        }
+    },
+    {
+        "SQ_ch": {
+            "elementShowNumber": 1,
+            "elementType": 2,
+            "modelFullCode": "SQ_ch",
+            "modelFullId": 33146,
+            "modelId": 8015,
+            "nodes": [
+                {
+                    "elementShowNumber": 20,
+                    "elementType": 93,
+                    "modelFullCode": "SQ_ch_i",
+                    "modelFullId": 33147,
+                    "modelId": 8015,
+                    "pmodelFullId": 33146,
+                    "sequence": 1,
+                    "tag": [
+                        {
+                            "color": "",
+                            "elementDesc": "充值中心",
+                            "elementName": "充值缴费",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://shopping.suning.com/project/cart/telefee.html#/"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://shopping.suning.com/project/cart/telefee.html#/",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156282627810133560.png",
+                            "productSpecialFlag": "",
+                            "sequence": 1,
+                            "templateFullId": 1218798,
+                            "trickPoint": "newwap_channelNSQ_121879833147_pic01"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "帮客服务",
+                            "elementName": "苏宁服务",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://c.m.suning.com/fuwu.html"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/fuwu.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156283045905888462.png",
+                            "productSpecialFlag": "",
+                            "sequence": 2,
+                            "templateFullId": 1218798,
+                            "trickPoint": "newwap_channelNSQ_121879833147_pic02"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "精品房源",
+                            "elementName": "苏宁有房",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://fang.suning.com/houseIndex.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156283048146439365.png",
+                            "productSpecialFlag": "",
+                            "sequence": 3,
+                            "templateFullId": 1218798,
+                            "trickPoint": "newwap_channelNSQ_121879833147_pic03"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "全国联保",
+                            "elementName": "手机维修",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://c.m.suning.com/weixiu0624.html"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/weixiu0624.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156283053424057546.png",
+                            "productSpecialFlag": "",
+                            "sequence": 4,
+                            "templateFullId": 1218798,
+                            "trickPoint": "newwap_channelNSQ_121879833147_pic04"
+                        }
+                    ]
+                }
+            ],
+            "pmodelFullId": 0,
+            "sequence": 1,
+            "tag": [
+                {
+                    "color": "",
+                    "elementDesc": "",
+                    "elementName": "生活服务",
+                    "elementType": 2,
+                    "linkType": -3,
+                    "linkUrl": "",
+                    "modelFullId": 33146,
+                    "picUrl": "/uimg/cms/img/156282622424943346.png",
+                    "productSpecialFlag": "",
+                    "sequence": 1,
+                    "templateFullId": 1218798,
+                    "trickPoint": "newwap_channelNSQ_121879833146_pic01"
+                }
+            ]
+        }
+    },
+    {
+        "SQ_ch": {
+            "elementShowNumber": 1,
+            "elementType": 2,
+            "modelFullCode": "SQ_ch",
+            "modelFullId": 33146,
+            "modelId": 8015,
+            "nodes": [
+                {
+                    "elementShowNumber": 20,
+                    "elementType": 93,
+                    "modelFullCode": "SQ_ch_i",
+                    "modelFullId": 33147,
+                    "modelId": 8015,
+                    "pmodelFullId": 33146,
+                    "sequence": 1,
+                    "tag": [
+                        {
+                            "color": "",
+                            "elementDesc": "苏宁金融",
+                            "elementName": "赚钱",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://jr.m.suning.com/sfmp/",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156283193497385255.png",
+                            "productSpecialFlag": "0001",
+                            "sequence": 1,
+                            "templateFullId": 1216696,
+                            "trickPoint": "newwap_channelNSQ_121669633147_pic01"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "投资理财",
+                            "elementName": "理财",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://licai.suning.com/lcportal/app/index.htm",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156283194935322426.png",
+                            "productSpecialFlag": "0004",
+                            "sequence": 2,
+                            "templateFullId": 1216696,
+                            "trickPoint": "newwap_channelNSQ_121669633147_pic02"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "安心保障",
+                            "elementName": "保险",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://issm.suning.com/"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://issm.suning.com/",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156283195919948871.png",
+                            "productSpecialFlag": "0002",
+                            "sequence": 3,
+                            "templateFullId": 1216696,
+                            "trickPoint": "newwap_channelNSQ_121669633147_pic03"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "分期借款",
+                            "elementName": "任性付",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://plportal.suning.com/plpps/entryJudgeNew/entryNew.html?channelType=010101105",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156283253479496514.png",
+                            "productSpecialFlag": "0007",
+                            "sequence": 4,
+                            "templateFullId": 1216696,
+                            "trickPoint": "newwap_channelNSQ_121669633147_pic04"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "新社交心礼物",
+                            "elementName": "苏宁卡",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://ka.m.suning.com/",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156283221469566056.png",
+                            "productSpecialFlag": "0008",
+                            "sequence": 5,
+                            "templateFullId": 1216696,
+                            "trickPoint": "newwap_channelNSQ_121669633147_pic05"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "自助转账",
+                            "elementName": "定期转账",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://sh.suning.com/life/rtfqa/regular-transfer-task-query!home.action",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156283224447015121.png",
+                            "productSpecialFlag": "0016",
+                            "sequence": 6,
+                            "templateFullId": 1216696,
+                            "trickPoint": "newwap_channelNSQ_121669633147_pic06"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "财富中心",
+                            "elementName": "身边财富",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://fciiss.suning.com/index.htm?from=epp"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://fciiss.suning.com/fortune.htm",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156283226214498733.png",
+                            "productSpecialFlag": "0017",
+                            "sequence": 7,
+                            "templateFullId": 1216696,
+                            "trickPoint": "newwap_channelNSQ_121669633147_pic07"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "众筹助力",
+                            "elementName": "众筹",
+                            "elementType": 2,
+                            "extMap": {
+                                "apUrl": "https://z.m.suning.com/"
+                            },
+                            "linkType": 4,
+                            "linkUrl": "https://z.m.suning.com/",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156283356644847415.png",
+                            "productSpecialFlag": "",
+                            "sequence": 8,
+                            "templateFullId": 1216696,
+                            "trickPoint": "newwap_channelNSQ_121669633147_pic08"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "抢12期免息券",
+                            "elementName": "免息商城",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://jinrong.suning.com/scms/waprxf_mall.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156333506868057352.png",
+                            "productSpecialFlag": "0005",
+                            "sequence": 9,
+                            "templateFullId": 1216696,
+                            "trickPoint": "newwap_channelNSQ_121669633147_pic09"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "掌上营业厅",
+                            "elementName": "苏宁通信",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://c.m.suning.com/yysxbydd.html",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156414483840481471.png",
+                            "productSpecialFlag": "0013",
+                            "sequence": 10,
+                            "templateFullId": 1216696,
+                            "trickPoint": "newwap_channelNSQ_121669633147_pic10"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "伴您温馨入眠",
+                            "elementName": "苏宁酒店",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "https://hotels.m.suning.com/",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156414495396756942.png",
+                            "productSpecialFlag": "0014",
+                            "sequence": 11,
+                            "templateFullId": 1216696,
+                            "trickPoint": "newwap_channelNSQ_121669633147_pic11"
+                        },
+                        {
+                            "color": "",
+                            "elementDesc": "正青春任我游",
+                            "elementName": "苏宁机票",
+                            "elementType": 2,
+                            "linkType": 4,
+                            "linkUrl": "http://trip.m.suning.com",
+                            "modelFullId": 33147,
+                            "picUrl": "/uimg/cms/img/156414516252618747.png",
+                            "productSpecialFlag": "0015",
+                            "sequence": 12,
+                            "templateFullId": 1216696,
+                            "trickPoint": "newwap_channelNSQ_121669633147_pic12"
+                        }
+                    ]
+                }
+            ],
+            "pmodelFullId": 0,
+            "sequence": 1,
+            "tag": [
+                {
+                    "color": "",
+                    "elementDesc": "",
+                    "elementName": "财富中心",
+                    "elementType": 2,
+                    "linkType": -3,
+                    "linkUrl": "",
+                    "modelFullId": 33146,
+                    "picUrl": "/uimg/cms/img/156405345794720944.jpg",
+                    "productSpecialFlag": "",
+                    "sequence": 1,
+                    "templateFullId": 1216696,
+                    "trickPoint": "newwap_channelNSQ_121669633146_pic01"
+                }
+            ]
+        }
+    },
+    {
+        "SQ_Space": {
+            "elementShowNumber": 1,
+            "elementType": 0,
+            "modelFullCode": "SQ_Space",
+            "modelFullId": 34416,
+            "modelId": 8410,
+            "pmodelFullId": 0,
+            "sequence": 1
+        }
+    },
+    {
+        "SQ_Space": {
+            "elementShowNumber": 1,
+            "elementType": 0,
+            "modelFullCode": "SQ_Space",
+            "modelFullId": 34416,
+            "modelId": 8410,
+            "pmodelFullId": 0,
+            "sequence": 1
+        }
+    },
+    {
+        "SQ_Space": {
+            "elementShowNumber": 1,
+            "elementType": 0,
+            "modelFullCode": "SQ_Space",
+            "modelFullId": 34416,
+            "modelId": 8410,
+            "pmodelFullId": 0,
+            "sequence": 1
+        }
+    },
+    {
+        "SQ_Space": {
+            "elementShowNumber": 1,
+            "elementType": 0,
+            "modelFullCode": "SQ_Space",
+            "modelFullId": 34416,
+            "modelId": 8410,
+            "pmodelFullId": 0,
+            "sequence": 1
+        }
+    },
+    {
+        "SQ_Space": {
+            "elementShowNumber": 1,
+            "elementType": 0,
+            "modelFullCode": "SQ_Space",
+            "modelFullId": 34416,
+            "modelId": 8410,
+            "pmodelFullId": 0,
+            "sequence": 1
+        }
+    },
+    {
+        "SQ_Space": {
+            "elementShowNumber": 1,
+            "elementType": 0,
+            "modelFullCode": "SQ_Space",
+            "modelFullId": 34416,
+            "modelId": 8410,
+            "pmodelFullId": 0,
+            "sequence": 1
+        }
+    },
+    {
+        "SQ_Space": {
+            "elementShowNumber": 1,
+            "elementType": 0,
+            "modelFullCode": "SQ_Space",
+            "modelFullId": 34416,
+            "modelId": 8410,
+            "pmodelFullId": 0,
+            "sequence": 1
+        }
+    },
+    {
+        "SQ_Space": {
+            "elementShowNumber": 1,
+            "elementType": 0,
+            "modelFullCode": "SQ_Space",
+            "modelFullId": 34416,
+            "modelId": 8410,
+            "pmodelFullId": 0,
+            "sequence": 1
+        }
+    }
+]

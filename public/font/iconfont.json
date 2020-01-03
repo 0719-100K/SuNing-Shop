@@ -1,0 +1,30 @@
+{
+  "id": "1587939",
+  "name": "苏宁易购项目",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4770758",
+      "name": "左箭头",
+      "font_class": "zuojiantou",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "5119346",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "8145817",
+      "name": "箭头",
+      "font_class": "jiantou",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    }
+  ]
+}
