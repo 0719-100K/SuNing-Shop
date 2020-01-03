@@ -50,7 +50,7 @@
       <!-- 首页十个导航 -->
       <div class="categoryContainer">
         <ul class="categoryUl">
-          <li v-for="(item,index) in cate" :key="index">
+          <li v-for="(item,index) in cate" :key="index" >
             <img :src="item.picUrl" alt="">
             <p>{{item.elementName}}</p>
           </li>

@@ -3,6 +3,7 @@
     <div class="readySearch" v-if="!searchList.length">
                                         <!-- 这个值是用户点击热词时传到搜索头部显示 -->
       <SearchHeader :isShow="!searchList.length" :currentHotWord="currentHotWord"></SearchHeader>
+
       <div class="bodyContainer">
         <div class="hotSearch">热门搜索</div>
         <div class="hotContent">
@@ -10,8 +11,12 @@
         </div>
       </div>
     </div>
+
+
     <div class="hasSearched" v-else>
+
       <SearchHeader></SearchHeader>
+
       <div class="searchNav">
         <div class="tab-item" v-for="(navItem,index) in navItems" :key="index" @click="tabClick(index)" :class="{active:currentIndex === index}">{{navItem}}</div>
       </div>
