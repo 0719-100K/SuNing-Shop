@@ -72,10 +72,7 @@
           this.$router.replace('/mustBuy/coolMachine')
           // this. selectedId = index
         }
-
         this. selectedId = index
-         
-
         
       },
       // 吸顶效果

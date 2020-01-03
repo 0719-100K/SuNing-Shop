@@ -1,7 +1,7 @@
 <template>
   <div class='categoryContainer'>
       <div class="zj_search">
-         <span class="iconfont icon" @click="$router.replace('/home')">&#xe642;</span> 
+         <span class="iconfont icon" @click="$router.push('/home')">&#xe642;</span> 
          <div class="search" @click="$router.replace('/search')">
            <span class="iconfont i">&#xe643;</span> 
            <div class='input'>搜索商品或店铺</div>
@@ -35,7 +35,7 @@
               <div class="household-recommend">
                 <ul>
                   <li v-for="(c,index) in ct.detail" :key="index"
-                   @click="toSmallLi"
+                   
                   >
                     <div class="neibuLi">
                       <img :src="c.imgUrl" alt="">
@@ -140,9 +140,7 @@ import Search from '../search/search'
       this.rightScroll.scrollTo(0, -top,100)
     },
 // 点击跳转
-    toSmallLi(){
-      this.$router.replace('/smallLi')
-    }
+   
   },    
     watch: {
       category() { 
@@ -234,7 +232,7 @@ import Search from '../search/search'
         background-color: #f4f4f4;
         .nav-box
           width 87px
-          height 700px
+          height 650px
           .kindsAds 
             position relative
             float left 
