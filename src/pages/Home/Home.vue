@@ -80,7 +80,7 @@
         <span>蓝月亮</span>
       </div>
       <div class="imgr">
-        <img @click="$router.replace('/login')" class="imgr" src="https://image1.suning.cn/uimg/cms/img/157199321817918653.png" alt="personal">
+        <img @click="$router.push(token?'/profile' : '/login')" class="img1" :src="token ? 'https://image2.suning.cn/uimg/cms/img/157199322108277118.png':'https://image1.suning.cn/uimg/cms/img/157199321817918653.png'" alt="personal">
       </div>
     </div>
     <!-- 置顶 -->
@@ -117,11 +117,8 @@
     computed:{
       ...mapState(['token'])
     },
-    async mounted(){
-      let result = await reqHomeCategory()
-      if (result.status === 1) {
-        this.cate = result.datas.enter_list.tag
-      }
+    mounted(){
+      this.initCate()
       new Swiper(this.$refs.horizontal, {
         autoplay: {
           disableOnInteraction: false,
@@ -131,11 +128,17 @@
         },
         loop: true
       })
-      if (this.cate.length>0) {
+      if (this.cate.length>0){
         this.initScroll()
       }
     },
     methods:{
+      async initCate(){
+        let result = await reqHomeCategory()
+        if (result.status === 1) {
+          this.cate = result.datas.enter_list.tag
+        }
+      },
       initScroll(){
         if (!this.homeScroll) {
           console.log('scroll');
