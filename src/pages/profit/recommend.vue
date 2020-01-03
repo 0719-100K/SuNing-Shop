@@ -113,7 +113,8 @@
             delay: 2000
           },
           pagination:{
-            el:'.swiper-pagination'
+            el:'.swiper-pagination',
+            type:'custom'
           }
         })
         new Swiper(this.$refs.lunbo2,{
@@ -149,8 +150,8 @@
   .recommendContainer
     // banner
     .swiper-container
-      padding 0 16px
       width 343px
+      overflow hidden
       height 120px
       margin-top 60px
       img 
