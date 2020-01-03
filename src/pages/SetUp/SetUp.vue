@@ -53,12 +53,7 @@
   import {MessageBox} from 'mint-ui'
   export default {
     computed:{
-      ...mapState(['user']),
-      phone(){
-        if (this.user.phone) {
-          return phone = this.user.phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2')
-        }
-      }
+      ...mapState(['user'])
     },
     methods:{
       logout(){
