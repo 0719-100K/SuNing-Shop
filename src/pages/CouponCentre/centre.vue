@@ -1,6 +1,6 @@
 <template>
 <!-- 外部包裹 -->
-<div class="contentContainer" ref="contentContainer">
+<div class="contentContainer">
 	<!-- 头部 -->
 	<div class="headerContainer">
 		<div class="title_header">
@@ -12,21 +12,22 @@
 				<div class="imgRight floatLeft" >
 					<img @click="isShowListItem" src="../../static/images/titleHeader/headerRight.png" alt="">
 				</div>
-				<div  v-show="isShow" class="search">
+				<div @touchmove.prevent
+				  v-show="isShow" 
+					 class="search"
+					 >
 					<input  type="text" placeholder="搜索">
-					<ul class="searchList">
+					<ul class="searchList" >
 						<li
 						 v-for="(ListItem, index) in navList" :key="index"
 						 :class="{active:index==currentItem}"
 						 @click="searchItem(index)"
 						 >{{ListItem.className}}</li>
 						 <li class="blank"></li>
-						 <div class="zhezhao show"
-						 @click="isOff"
-						 ></div>
 					</ul>
-				
 				</div>
+				<!-- 遮罩层 -->
+				<div @touchmove.prevent v-show="isShow"  class="zhezhao" @click="isOffShow" ></div>
 			</div>
 		</div>
 	</div>	
@@ -46,6 +47,7 @@
 	  <div class="inner wrapper"  ref="nav">
 				<div class="navList content">
 					<div
+						ref="items"
 						class="items"
 						v-for="(listItem,index) in navList" :key='index'
 						@click="navItem(index)"
@@ -133,7 +135,7 @@
 			</div>
 		</div>
 	</div>
-		
+
 </div>
 </template>
 <script>
@@ -143,7 +145,6 @@ import   '../../static/css/rest.css'
 import BScroll from 'better-scroll'
 import Swiper from 'swiper'
 import  'swiper/css/swiper.css'
-
 
 	export default {
 			 name: 'contentContainer',
@@ -194,9 +195,22 @@ import  'swiper/css/swiper.css'
 		methods: {
 			navItem:function(index){
 				this.currentItem = index
+
 			},
 			searchItem(index){
-				this.currentItem = index
+			let current=	this.currentItem = index
+			let offset = this.$refs.items
+			console.log(this.$el.clientWidth)
+				if (this.isShow) {
+					this.isShow = false
+					if (this.$refs.items) {
+						
+						console.log(this)
+					}
+				}
+		
+
+
 			},
 			backHome(){
 				this.$router.push('/home')
@@ -204,9 +218,11 @@ import  'swiper/css/swiper.css'
 			isShowListItem(){
 				this.isShow = !this.isShow
 			},
-			// isOff(){
-				
-			// },
+			isOffShow(){
+				if (this.isShow) {
+					this.isShow = false
+				}
+			},
 			handleMy(){
 				this.$router.push('/home/centre/persons')
 			},
@@ -222,10 +238,12 @@ import  'swiper/css/swiper.css'
 
 	.contentContainer
 		padding-bottom 50px
+		//公共
 		.inner
 			width 93%
 			margin 0 auto
 			overflow hidden
+		//头部导航
 		.headerContainer
 			.title_header
 				background white
@@ -253,18 +271,6 @@ import  'swiper/css/swiper.css'
 						img
 							width auto
 							height 18px
-					.zhezhao
-						position fixed
-						width 100%
-						height 53%
-						bottom 0
-						background rgba(0,0,0,.5)
-						// z-index 1
-						display none 	
-					.off
-						display none 	
-					.show
-						display block
 					.search
 						width 100%
 						// height 100%
@@ -300,6 +306,16 @@ import  'swiper/css/swiper.css'
 									background #fff
 							.active
 								color #ff6600
+					//遮罩层
+					.zhezhao
+						position fixed
+						top 44px
+						right 0
+						bottom 0
+						left 0
+						background rgba(0,0,0,.5)
+						z-index 2
+		//轮播		
 		.banner_box
 			.inner
 				width 93%
@@ -309,7 +325,8 @@ import  'swiper/css/swiper.css'
 					img
 						width 93%
 						height 100%
-						margin 0 auto 
+						margin 0 auto
+		//横向导航				
 		.navListContainer
 			width 100%
 			.navList
@@ -336,6 +353,7 @@ import  'swiper/css/swiper.css'
 						background #ff5500
 						border-radius 4px
 						margin 0 auto
+		//商品				
 		.shopListBox
 			margin-top 10px
 			width 100%
@@ -416,6 +434,7 @@ import  'swiper/css/swiper.css'
 									border-radius 10px
 									background pink
 									color #f50
+		//底部tab														
 		.footerTab
 			position fixed
 			background white

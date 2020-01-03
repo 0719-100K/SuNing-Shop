@@ -50,6 +50,7 @@
 
 <script type="text/ecmascript-6">
   import { mapState } from 'vuex'
+  import {MessageBox} from 'mint-ui'
   export default {
     computed:{
       ...mapState(['user']),
@@ -61,8 +62,15 @@
     },
     methods:{
       logout(){
-        this.$store.dispatch('logout')
-        this.$router.replace('/login')
+        MessageBox.confirm('确定执行此操作?').then(
+          () => { // 点击确认
+            this.$store.dispatch('logout')
+            this.$router.replace('/login')
+          },
+          () => { // 点击取消
+            console.log('点击了取消')
+          }
+        )
       }
     }
   }

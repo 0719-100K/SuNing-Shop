@@ -113,9 +113,18 @@
     computed : {
       ...mapState(['guessLike','user'])
     },
+<<<<<<< HEAD
     mounted() {
       this.$store.dispatch('getGuessLike')
     },
+=======
+    // mounted() {
+    //   this.$store.dispatch('getGuessLike')
+    //   if (this.user.phone) {
+    //     this.phone = this.user.phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2')
+    //   }
+    // },
+>>>>>>> d9174081341d5367e9f143961addde595bb437d7
     data() {
       return {
         orderLists:[
