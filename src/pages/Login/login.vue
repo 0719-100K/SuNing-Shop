@@ -176,7 +176,10 @@
             MessageBox('提示',result.msg)
           }
         }
-
+        this.phone=''
+        this.yzmCode=''
+        this.name=''
+        this.pwd=''
         
       }
     }

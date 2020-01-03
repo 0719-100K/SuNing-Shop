@@ -5,7 +5,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import Header from '@/components/Header/Header.vue'
+  import Header from '@/components/Header1/Header.vue'
   export default {
     components:{
       Header

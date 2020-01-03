@@ -1,10 +1,20 @@
 
-import {REQ_BUYLIST,REQ_CoolMachine,
-  REQ_TABBAR,REQ_ELECTRICS,
-  REQ_CATEGORY,REQ_GUESSLIKE,
-  REQ_SEARCHLIST,CLEARSEARCHLIST,
-  SORTSEARCH,REQ_RECEIVE_GOODS ,REQ_RECEIVE_CLASSLIST, 
-  SAVE_USER,SAVE_TOKEN,RESET_TOKEN,RESET_USER
+import {
+  REQ_BUYLIST,
+  REQ_CoolMachine,
+  REQ_TABBAR,
+  REQ_ELECTRICS,
+  REQ_CATEGORY,
+  REQ_GUESSLIKE,
+  REQ_SEARCHLIST,
+  CLEARSEARCHLIST,
+  SORTSEARCH,
+  REQ_RECEIVE_GOODS ,
+  REQ_RECEIVE_CLASSLIST, 
+  SAVE_USER,
+  SAVE_TOKEN,
+  RESET_TOKEN,
+  RESET_USER
 } from './mutation_type'
 
 export default {
@@ -50,16 +60,20 @@ export default {
   [REQ_RECEIVE_CLASSLIST](state,data){
     state.classList = data
   },
+  // 保存用户
   [SAVE_USER](state,{user}){
     state.user = user
   },
+  // 保存token
   [SAVE_TOKEN](state,{token}){
     state.token = token
   },
-  [RESET_USER](state,{user}){
+  // 删除用户
+  [RESET_USER](state){
     state.user = {}
   },
-  [RESET_TOKEN](state,{token}){
+  // 删除token
+  [RESET_TOKEN](state){
     state.token = ''
   },
 }
