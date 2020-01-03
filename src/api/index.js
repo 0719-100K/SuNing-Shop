@@ -51,5 +51,9 @@ export const reqGoods = () => ajax('/msite/homegoods')
 // 搜索请求
 export const reqSearchList = (keyword) => ajax.post('/search',{keyword})
 
+//获取领券中心nav
 export const reqShopList = () => ajax(`/center/centerHeader`)
 export const reqClassList = () => ajax(`/center/centerGoods`)
+
+
+

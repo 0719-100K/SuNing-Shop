@@ -37,6 +37,11 @@ import Login from '../pages/Login/login.vue'
 import Centre from '../pages/CouponCentre/centre.vue'
 import Profit from '../pages/profit/recommend.vue'
 
+//领券中心下级
+import Persons from '../pages/CouponCentre/Persons.vue'
+
+
+
 export default [
     {
         path:'/home',
@@ -51,7 +56,11 @@ export default [
     },
     {
         path:'/home/centre',
-        component:Centre
+        component:Centre,
+    },
+    {
+        path:'/home/centre/persons',
+        component:Persons
     },
     {
         path:'/category',
