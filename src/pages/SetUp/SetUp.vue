@@ -7,7 +7,7 @@
     </div>
     <div class="username">
       <img src="//image.suning.cn/uimg/cmf/cust_headpic/0000000000_01_240x240.jpg" alt="">
-      <p>{{user.name || phone}}</p>
+      <p>{{user.phone ? user.phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2') : user.name}}</p>
       <p class="icon">></p>
     </div>
     <ul class="list">
@@ -51,22 +51,12 @@
 <script type="text/ecmascript-6">
   import { mapState } from 'vuex'
   export default {
-    data(){
-      return {
-        phone:''
-      }
-    },
     computed:{
       ...mapState(['user']),
       phone(){
         if (this.user.phone) {
           return phone = this.user.phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2')
         }
-      }
-    },
-    mounted(){
-      if (this.user.phone) {
-        this.phone = this.user.phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2')
       }
     },
     methods:{

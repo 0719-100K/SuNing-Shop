@@ -113,6 +113,7 @@ export default {
     },
     // 点击热词---将点击的词存到状态便于头部展示、发送搜索请求
     clickHotSearch(text){
+      console.log('111');
       this.currentHotWord = text
       // 将请求回来的数据存到vuex中
       this.$store.dispatch('getSearchList',text)

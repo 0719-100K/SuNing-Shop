@@ -80,12 +80,12 @@ async getCategory({commit}){
   }
   },
   async getSearchList({commit},keyword){
-  let result = await reqSearchList(keyword)
-  if(result.status === 1){
-    const data = result.datas.skus
-    console.log(data)
-    commit(REQ_SEARCHLIST,data)
-  }
+    let result = await reqSearchList(keyword)
+    if(result.status === 1){
+      const data = result.datas.skus
+      console.log(data)
+      commit(REQ_SEARCHLIST,data)
+    }
   },
 
   //  保存用户/token
