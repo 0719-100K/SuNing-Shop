@@ -189,6 +189,9 @@
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   .loginContainer
+    width 100%
+    height 100%
+    background-color #fff
     overflow hidden
     // 头部
     .header

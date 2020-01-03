@@ -148,8 +148,7 @@
 <style scoped lang="stylus" rel="stylesheet/stylus">
 
   .recommendContainer
-    // banner
-
+    background-color #fff
     .swiper-container
       width 343px
       overflow hidden
@@ -272,8 +271,9 @@
     // 信用生活
     .creditContainer
       width 343px
-      height 146px
-      margin 34px 16px 16px
+      // height 146px
+      margin 34px 16px 0px
+      padding-bottom 16px
       .title
         // height 18px
         font-size 18px

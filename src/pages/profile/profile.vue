@@ -27,7 +27,7 @@
         </div>
         <!-- 会员码 -->
         <div class="userRight">
-          <img src="../../common/images/setting.png" alt="">
+          <img src="http://image.suning.cn/project/msinode/wap/home/image/qr-icon.png" alt="">
         </div>
       </div>
       <!-- 列表 -->
