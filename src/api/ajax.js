@@ -35,7 +35,7 @@ instance.interceptors.request.use((config) => {
   } else {  // 有些接口是需要token校验，如个人中心、购物车等
     const needCheck = config.headers.needCheck
     if (needCheck) {
-      throw new Error('请先登录')
+      throw new Error('请先登录') 
     }
   }
 

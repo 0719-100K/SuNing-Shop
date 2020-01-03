@@ -16,7 +16,7 @@
     </span>
     <span class='footer-item' :class="{on:$route.path==='/mustBuy/careChoice'}" @click="goto('/mustBuy/careChoice')">
       <span>
-        <img v-if="$route.path==='/mustBuy/careChoice'" class="icon" src="https://image.suning.cn/uimg/cms/img/157105715273415124.png" alt="">
+        <img v-if="$route.path==='/mustBuy/careChoice' || $route.path==='/mustBuy/coolMachine' || $route.path==='/mustBuy/electrics'" class="icon" src="https://image.suning.cn/uimg/cms/img/157105715273415124.png" alt="">
         <img v-else class="icon" src="https://image2.suning.cn/uimg/cms/img/157543978244974042.png?from=mobile" alt="">
       </span>
       <p>必抢清单</p>

@@ -1,11 +1,11 @@
-n <template>
+<template>
 <!-- 外部包裹 -->
-<div class="contentContainer">
+<div class="contentContainer" ref="contentContainer">
 	<!-- 头部 -->
 	<div class="headerContainer">
 		<div class="title_header">
 			<div class="clearFloat header_inner">
-				<div class="imgLeft floatLeft">
+				<div @click="backHome" class="imgLeft floatLeft">
 					<img src="../../static/images/titleHeader/headerLeft.png" alt="">
 				</div>
 				<div class="textHeader floatLeft">领劵中心</div>
@@ -17,44 +17,47 @@ n <template>
 					<ul class="searchList">
 						<li
 						 v-for="(ListItem, index) in navList" :key="index"
-						 v-bind:class="{active:index==currentItem}"
+						 :class="{active:index==currentItem}"
+						 @click="searchItem(index)"
 						 >{{ListItem.className}}</li>
+						 <li class="blank"></li>
+						 <div class="zhezhao show"
+						 @click="isOff"
+						 ></div>
 					</ul>
+				
 				</div>
 			</div>
 		</div>
 	</div>	
 
 	<!-- banner -->
-	<div class="banner_box">
-		<div class="inner">
-				<div   class="imgBj">
+	<div class="banner_box swiper-container">
+		<div class="inner swiper-wrapper">
+				<div   class="imgBj swiper-slide">
 					<img src="../../static/images/titleHeader/header.png" alt="">
 				</div>
+				<div class="swiper-pagination"></div>
 		</div>
 	</div>
 	
 	<!-- 滑动导航 -->
-	<div class=" navListContainer" >
-
-	  <div class="inner">
-
-				<div class="navList">
-					<div 
-						class="items" 
+	<div class=" navListContainer">
+	  <div class="inner wrapper"  ref="nav">
+				<div class="navList content">
+					<div
+						class="items"
 						v-for="(listItem,index) in navList" :key='index'
 						@click="navItem(index)"
 						v-bind:class="{active:index==currentItem}"
-					>   
+					>
 						<div class="itemText ">
 							{{listItem.className}}
 						</div>
 						<div v-show="index==currentItem" class="underline"></div>
+					</div>
 				</div>
-			</div>
-
 		</div>
-
 	</div>
 
   <!-- 主体内容 -->
@@ -136,145 +139,83 @@ n <template>
 <script>
 import Vue from 'vue'
 import {mapState} from "vuex"
-// import   '../../../static/css/rest.css'
-// import Persons from '../Persons/Persons'
+import   '../../static/css/rest.css'
+import BScroll from 'better-scroll'
+import Swiper from 'swiper'
+import  'swiper/css/swiper.css'
+
+
 	export default {
 			 name: 'contentContainer',
-			//  components:{
-			// 	Persons
-
-			//  },
 		data(){
 			return {
 				currentItem:0,
 				isShow:false,
+				isOff:false,
 				navList:[
-				{"classCode": "1","className": "精选","classType": "0" },
-        {"classCode": "62","className": "SUPER专享","classType": "4","picUrl": "", "classAdUrl": "","classAdLink": "" },
-        {
-            "classCode": "112184",
-            "className": "医药保健",
-            "classType": "3",
-            "picUrl": ""
-        },
-        {
-            "classCode": "112185",
-            "className": "家用电器",
-            "classType": "3",
-            "picUrl": ""
-        },
-        {
-            "classCode": "112198",
-            "className": "运动户外",
-            "classType": "3",
-            "picUrl": ""
-        },
-        {
-            "classCode": "121371",
-            "className": "家居家纺",
-            "classType": "3",
-            "picUrl": ""
-        },
-        {
-            "classCode": "144547",
-            "className": "手机数码",
-            "classType": "3",
-            "picUrl": ""
-        },
-        {
-            "classCode": "160576",
-            "className": "美妆个护",
-            "classType": "3",
-            "picUrl": ""
-        },
-        {
-            "classCode": "160577",
-            "className": "酒水冲饮",
-            "classType": "3",
-            "picUrl": ""
-        },
-        {
-            "classCode": "160578",
-            "className": "食品生鲜",
-            "classType": "3",
-            "picUrl": ""
-        },
-        {
-            "classCode": "160579",
-            "className": "母婴用品",
-            "classType": "3",
-            "picUrl": ""
-        },
-        {
-            "classCode": "160580",
-            "className": "服饰内衣",
-            "classType": "3",
-            "picUrl": ""
-        },
-        {
-            "classCode": "160581",
-            "className": "箱包鞋靴",
-            "classType": "3",
-            "picUrl": ""
-        },
-        {
-            "classCode": "160597",
-            "className": "电脑办公",
-            "classType": "3",
-            "picUrl": ""
-        },
-        {
-            "classCode": "160598",
-            "className": "家装建材",
-            "classType": "3",
-            "picUrl": ""
-        },
-        {
-            "classCode": "160599",
-            "className": "钟表配饰",
-            "classType": "3",
-            "picUrl": "",
-            "classAdUrl": "",
-            "classAdLink": ""
-        },
-        {
-            "classCode": "160600",
-            "className": "生活家电",
-            "classType": "3",
-            "picUrl": ""
-        }
-		],
-		
-	    }
+					{"classCode": "1","className": "精选","classType": "0" },
+					{"classCode": "62","className": "SUPER专享","classType": "4","picUrl": "", "classAdUrl": "","classAdLink": "" },
+					{"classCode": "112184","className": "医药保健","classType": "3","picUrl": ""},
+					{"classCode": "112185","className": "家用电器","classType": "3","picUrl": ""},
+					{"classCode": "112198","className": "运动户外","classType": "3","picUrl": ""},
+					{"classCode": "121371","className": "家居家纺","classType": "3","picUrl": ""},
+					{"classCode": "144547","className": "手机数码","classType": "3","picUrl": ""},
+					{"classCode": "160576","className": "美妆个护","classType": "3","picUrl": ""},
+					{ "classCode": "160577","className": "酒水冲饮","classType": "3", "picUrl": ""},
+					{"classCode": "160578","className": "食品生鲜","classType": "3","picUrl": ""},
+					{"classCode": "160579","className": "母婴用品","classType": "3","picUrl": "" },
+					{"classCode": "160580","className": "服饰内衣","classType": "3","picUrl": ""},
+					{"classCode": "160581","className": "箱包鞋靴","classType": "3","picUrl": ""},
+					{"classCode": "160597","className": "电脑办公","classType": "3","picUrl": ""},
+					{"classCode": "160598","className": "家装建材","classType": "3","picUrl": ""},
+					{"classCode": "160599","className": "钟表配饰","classType": "3","picUrl": "","classAdUrl": "","classAdLink": ""},
+					{"classCode": "160600","className": "生活家电","classType": "3","picUrl": ""}
+				]
+	  }
 	},
-
 		computed: {
 			...mapState(["classList"]),
 			},
 		async mounted(){
-          await  this.$store.dispatch("getClassList")
-					console.log(this.classList[0].activityList[0].commdtyList)
-					// console.log(this.classList)
-
-        },
-
+					await  this.$store.dispatch("getClassList")
+					//横向滚动
+					new BScroll(this.$refs.nav,{
+						scrollX:true, //横向滚动
+						click:true//可点击
+					})
+					//轮播
+					new Swiper('.swiper-container',{
+						//分页
+						paination:{
+							el:'.swiper-pagination'
+						}
+					})
+			},
 		methods: {
 			navItem:function(index){
 				this.currentItem = index
 			},
+			searchItem(index){
+				this.currentItem = index
+			},
+			backHome(){
+				this.$router.push('/home')
+			},
 			isShowListItem(){
 				this.isShow = !this.isShow
 			},
+			// isOff(){
+				
+			// },
 			handleMy(){
-				this.$router.push('/persons')
+				this.$router.push('/home/centre/persons')
 			},
 			setClass(key) {
             let obj = {face: true}
             obj[`modal_box${key}`] = true
             return obj
         },
-	
-      }
+  }
 }
 </script>
 <style scoped lang="stylus">
@@ -282,89 +223,97 @@ import {mapState} from "vuex"
 	.contentContainer
 		padding-bottom 50px
 		.inner
-			width 351px
+			width 93%
 			margin 0 auto
-			// overflow hidden
+			overflow hidden
 		.headerContainer
 			.title_header
 				background white
-				width 375px
+				width 100%
 				height 44px
 				line-height 44px
 				.header_inner
 					display flex
-					border-box box-sizing 
-					margin 0 auto
+					justify-content space-around
 					position relative
 					div
 						font-size 18px !important
 						font-weight 500
 						color #222
 						&:nth-child(3)
-							width 115px
+							width 30%
 							text-align right
-							padding-right 15px
+							padding-right 7%
 						&:nth-child(2)
-							width 115px
+							width 30%
 							text-align center
 						&:nth-child(1)
-							width 115px
-							padding-left 15px
+							width 30%
+							padding-left 7%
 						img
 							width auto
 							height 18px
+					.zhezhao
+						position fixed
+						width 100%
+						height 53%
+						bottom 0
+						background rgba(0,0,0,.5)
+						// z-index 1
+						display none 	
+					.off
+						display none 	
+					.show
+						display block
 					.search
 						width 100%
-						position fixed
+						// height 100%
+						position absolute
 						top 44px
 						overflow hidden
 						background white
-						
-						z-index 1
+						z-index 99
 						input
-							width 351px
+							border none
+							width 93%
 							height 30px
-							margin 18px 10px 16px 10px
+							margin 18px auto
+							margin-left 1%
 							background #eee
-							outline none
-							border-radius 20px
+							outline-style  none
+							border-radius 5px
+							padding-left 20px
 						.searchList
-							// width 375px
-							height 240px
-							padding 0 3px 23px 12px
 							display flex
-							// flex-wrap wrap
 							justify-content space-around
 							font-size 12px
-
 							width: 100%;
-							// height: 150px;
-							// display: flex;
 							flex-flow: row wrap;
-							align-content: flex-start
+							margin-bottom 23px
 							li
-								// width 111px
-								// height 27px
-								// line-height 27px
-								// background #eee	
+								width 30%
+								line-height 27px
+								text-align center
+								background #eee
+								margin-bottom 2%
+								&.blank
+									background #fff
 							.active
-								color #ff6600	
- 
-		.inner
-			width 351px
-			margin 0 auto
-			overflow hidden 				
-			.imgBj
-				display flex
-				justify-content center
-				img
-					width 351px
-					height 103px
-					margin 10px 0px 2px
+								color #ff6600
+		.banner_box
+			.inner
+				width 93%
+				margin 10px auto
+				overflow hidden 				
+				.imgBj
+					img
+						width 93%
+						height 100%
+						margin 0 auto 
 		.navListContainer
 			width 100%
 			.navList
-				overflow-x scroll
+				width 1450px
 				white-space nowrap
 				.items
 					font-size 15px
@@ -392,7 +341,6 @@ import {mapState} from "vuex"
 			width 100%
 			.inner
 				.modal_box
-					height 200px
 					.modal_top
 						position relative
 						background #FDEADC
@@ -412,6 +360,7 @@ import {mapState} from "vuex"
 									margin 7px 0  0 4.5px
 									text-align center
 							.bottomDown
+								width 80%
 								height 16px
 								font-size 14px
 								margin 2px 0 0 0
@@ -419,16 +368,12 @@ import {mapState} from "vuex"
 								overflow hidden
 								white-space nowrap
 						.top_right
-							// display inline-block
-							// line-height 1.8rem
 							font-size 12px
 							width 20%
 							height 100%
 							position relative
-							// top 50%
 							.text
 								display inline-block
-								// line-height 1.8rem
 								background #f50
 								position absolute
 								width 64px
@@ -442,7 +387,7 @@ import {mapState} from "vuex"
 								border-radius 10px
 					.modal_bottom
 						height 136px
-						padding 0 12px
+						padding 10px 12px 0 12px
 						background white
 						border-radius 20px
 						&:nth-child(2)
@@ -474,7 +419,6 @@ import {mapState} from "vuex"
 		.footerTab
 			position fixed
 			background white
-			z-index 999
 			bottom 0
 			left 0
 			height 40px

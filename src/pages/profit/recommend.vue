@@ -2,7 +2,7 @@
   <div class="recommendContainer">
     <!-- 头部 -->
     <Header/>
-      <!-- 轮播图 -->
+    <!-- 轮播图 -->
     <div class="swiper-container" ref="lunbo1">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="(banner,index) in bannerList" :key="index">
@@ -114,7 +114,7 @@
           },
           pagination:{
             el:'.swiper-pagination',
-            type:'custom'
+            // type:'custom'
           }
         })
         new Swiper(this.$refs.lunbo2,{
@@ -132,10 +132,10 @@
           new BScroll(this.$refs.bank,{
             click:true,
             scrollX:true,
-            snap: {
-              loop: true,
-              threshold: 0.1,
-            }
+            // snap: {
+            //   loop: true,
+            //   threshold: 0.1,
+            // }
           })
         })
       }
@@ -149,14 +149,18 @@
 
   .recommendContainer
     // banner
+
     .swiper-container
       width 343px
       overflow hidden
       height 120px
       margin-top 60px
+      --swiper-theme-color #fff
       img 
         width 100%
         height 100%
+				
+			
   
     // 导航
     .navContainer
