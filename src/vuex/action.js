@@ -13,12 +13,21 @@ import {
   SAVE_TOKEN,
   RESET_TOKEN,
   RESET_USER
+  
 }
  from './mutation_type'
-import {reqBuyList,reqCoolMachine,
-  reqTabBar,reqElectrics,
-  reqCategory,reqGuessLike,
-  reqSearchList, reqClassList,reqGoods} from '../api/index'
+import {
+  reqBuyList,
+  reqCoolMachine,
+  reqTabBar,
+  reqElectrics,
+  reqCategory,
+  reqGuessLike,
+  reqSearchList, 
+  reqClassList,
+  reqGoods,
+  reqAutoLogin
+} from '../api/index'
 
 export default{
   // 商品详情
@@ -95,6 +104,16 @@ async getCategory({commit}){
     delete user.token
     commit(SAVE_USER,{user})
     commit(SAVE_TOKEN,{token})
+  },
+  // 自动登录
+  async autoLogin({commit,state}){
+    if (state.token && !state.user._id) {
+      const result = await reqAutoLogin()
+      if (result.code === 1) {
+        const user = result.data
+        commit(SAVE_USER,{user})
+      }
+    }
   },
 
   // 退出登录
