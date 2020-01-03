@@ -43,22 +43,16 @@ export default [
         component:Home,
         meta: {
             isShowFooter: true
-        },
-        children:[
-            {
-                path:'/home/money',
-                component:Profit
-            },
-            {
-                path:'/home/centre',
-                component:Centre
-            }
-        ]
+        }
     },
-    // {
-    //     path:'/centre',
-    //     component:Centre,  
-    // },
+    {
+        path:'/home/money',
+        component:Profit
+    },
+    {
+        path:'/home/centre',
+        component:Centre
+    },
     {
         path:'/category',
         component: Category, 

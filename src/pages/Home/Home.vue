@@ -147,7 +147,11 @@
         this.homeScroll.scrollTo(0,0,0)
       },
       goCate(index){
-        this.$router.push(`/home/money/${index}`)
+        if (index === 6) {
+          this.$router.push('/home/money')
+        }else if (index === 8) {
+          this.$router.push('/home/centre')
+        }
       }
     },
     watch:{
