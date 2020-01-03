@@ -5,7 +5,7 @@
         <div class="header-top">
           <img @click="$router.push('/category')" class="img1" src="https://image2.suning.cn/uimg/cms/img/157199320847433454.png" alt="category">
           <img class="img2" src="https://image1.suning.cn/uimg/cms/img/157734413513115783.gif" alt="header2">
-          <img @click="$router.replace('/login')" class="img1" src="https://image1.suning.cn/uimg/cms/img/157199321817918653.png" alt="personal">
+          <img @click="$router.push('/login')" class="img1" src="https://image1.suning.cn/uimg/cms/img/157199321817918653.png" alt="personal">
         </div>
         <div class="header-bottom" @click="$router.push('/search')">
           <i class="iconfont icon-RectangleCopy"></i>
@@ -84,6 +84,10 @@
     </div>
     <!-- 置顶 -->
     <div v-show="scrolly>=1500" class="gotop" @click="gotoTop"></div>
+    <!-- 底部登录 -->
+    <div class="footerImg" v-if="scrolly<=13400" @click="$router.push('/login')">
+      <img src="https://image1.suning.cn/uimg/cms/img/157588645542963955.png" alt="">
+    </div>
   </div>
 </template>
 
@@ -104,7 +108,8 @@
     data(){
       return {
         cate:[],
-        scrolly:0
+        scrolly:0,
+        top:0
       }
     },
     async mounted(){
@@ -313,4 +318,15 @@
       position fixed
       bottom 60px
       right 12px
+      z-index 99
+    .footerImg
+      width 100%
+      height 45px
+      background-color #333
+      img   
+        width 100%
+        height 45px
+        position absolute
+        bottom 50px
+        left 0
 </style>
