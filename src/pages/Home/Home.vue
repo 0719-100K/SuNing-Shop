@@ -321,7 +321,7 @@
       background-repeat no-repeat
       background-size 100% 100%
       position fixed
-      bottom 60px
+      bottom 90px
       right 12px
       z-index 99
     .footerImg
