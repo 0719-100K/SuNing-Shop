@@ -51,12 +51,22 @@
 <script type="text/ecmascript-6">
   import { mapState } from 'vuex'
   export default {
+    data(){
+      return {
+        phone:''
+      }
+    },
     computed:{
       ...mapState(['user']),
       phone(){
         if (this.user.phone) {
           return phone = this.user.phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2')
         }
+      }
+    },
+    mounted(){
+      if (this.user.phone) {
+        this.phone = this.user.phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2')
       }
     },
     methods:{
