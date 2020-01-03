@@ -154,6 +154,7 @@
       overflow hidden
       height 120px
       margin-top 60px
+      --swiper-theme-color #fff
       img 
         width 100%
         height 100%
