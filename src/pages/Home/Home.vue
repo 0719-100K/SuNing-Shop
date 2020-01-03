@@ -5,7 +5,7 @@
         <div class="header-top">
           <img @click="$router.push('/category')" class="img1" src="https://image2.suning.cn/uimg/cms/img/157199320847433454.png" alt="category">
           <img class="img2" src="https://image1.suning.cn/uimg/cms/img/157734413513115783.gif" alt="header2">
-          <img @click="$router.push('/login')" class="img1" src="https://image1.suning.cn/uimg/cms/img/157199321817918653.png" alt="personal">
+          <img @click="$router.push(token?'/profile' : '/login')" class="img1" :src="token ? 'https://image2.suning.cn/uimg/cms/img/157199322108277118.png':'https://image1.suning.cn/uimg/cms/img/157199321817918653.png'" alt="personal">
         </div>
         <div class="header-bottom" @click="$router.push('/search')">
           <i class="iconfont icon-RectangleCopy"></i>
@@ -86,7 +86,7 @@
     <!-- 置顶 -->
     <div v-show="scrolly>=1500" class="gotop" @click="gotoTop"></div>
     <!-- 底部登录 -->
-    <div class="footerImg" v-if="scrolly<=13400" @click="$router.push('/login')">
+    <div class="footerImg" v-if="scrolly<=13400 && !token" @click="$router.push('/login')">
       <img src="https://image1.suning.cn/uimg/cms/img/157588645542963955.png" alt="">
     </div>
   </div>
@@ -100,6 +100,7 @@
   import Recommend from '@components/home/Recommend/Recommend'
   import HomeLike from '@components/home/HomeLike/HomeLike'
   import {reqHomeCategory} from '@/api'
+  import { mapState } from 'vuex'
   export default {
     components:{
       Discount,
@@ -112,6 +113,9 @@
         scrolly:0,
         top:0
       }
+    },
+    computed:{
+      ...mapState(['token'])
     },
     async mounted(){
       let result = await reqHomeCategory()
