@@ -44,12 +44,18 @@
         <p class="lic">微信等</p>
       </li>
     </ul>
-    <div class="logout">退出登录</div>
+    <div class="logout" @click="logout">退出登录</div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
   export default {
+    methods:{
+      logout(){
+        this.$store.dispatch('logout')
+        this.$router.replace('/login')
+      }
+    }
   }
 </script>
 

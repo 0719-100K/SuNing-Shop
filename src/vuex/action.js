@@ -1,9 +1,18 @@
 
-import {REQ_BUYLIST,REQ_CoolMachine,
-  REQ_TABBAR,REQ_ELECTRICS,
-  REQ_CATEGORY,REQ_GUESSLIKE,
-  REQ_SEARCHLIST,REQ_RECEIVE_CLASSLIST,
-  SAVE_USER,SAVE_TOKEN}
+import {
+  REQ_BUYLIST,
+  REQ_CoolMachine,
+  REQ_TABBAR,
+  REQ_ELECTRICS,
+  REQ_CATEGORY,
+  REQ_GUESSLIKE,
+  REQ_SEARCHLIST,
+  REQ_RECEIVE_CLASSLIST,
+  SAVE_USER,
+  SAVE_TOKEN,
+  RESET_TOKEN,
+  RESET_USER
+}
  from './mutation_type'
 import {reqBuyList,reqCoolMachine,
   reqTabBar,reqElectrics,
@@ -53,29 +62,37 @@ async getCategory({commit}){
   }
  },
 
-   async getGuessLike({commit}){
-    let result = await reqGuessLike()
-    if(result && result.status === 1){
-      
-      const data = result.datas.skus
-      commit(REQ_GUESSLIKE,data)
-    }
-   },
-   async getSearchList({commit},keyword){
-    let result = await reqSearchList(keyword)
-    if(result.status === 1){
-      const data = result.datas.skus
-      console.log(data)
-      commit(REQ_SEARCHLIST,data)
-    }
-   },
+  async getGuessLike({commit}){
+  let result = await reqGuessLike()
+  if(result && result.status === 1){
+    
+    const data = result.datas.skus
+    commit(REQ_GUESSLIKE,data)
+  }
+  },
+  async getSearchList({commit},keyword){
+  let result = await reqSearchList(keyword)
+  if(result.status === 1){
+    const data = result.datas.skus
+    console.log(data)
+    commit(REQ_SEARCHLIST,data)
+  }
+  },
 
+  //  保存用户/token
   saveUser({commit},user){
     const token = user.token
     localStorage.setItem('token_key',token)
     delete user.token
     commit(SAVE_USER,{user})
     commit(SAVE_TOKEN,{token})
+  },
+
+  // 退出登录
+  logout({commit}){
+    localStorage.removeItem('token_key')
+    commit(RESET_TOKEN)
+    commit(RESET_USER)
   },
   
 // 领券中心
