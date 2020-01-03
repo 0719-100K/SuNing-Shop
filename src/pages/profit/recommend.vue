@@ -79,7 +79,7 @@
   import Swiper from 'swiper'
   import 'swiper/css/swiper.css'
   import BScroll from 'better-scroll'
-  import Header from '@/components/Header/Header.vue'
+  import Header from '@/components/Header1/Header.vue'
   import {reqRecommendBanner,reqRecommendGate,reqRecommendBank} from '@/api'
   export default {
     data(){
