@@ -110,7 +110,7 @@ async getCategory({commit}){
     if (state.token && !state.user._id) {
       const result = await reqAutoLogin()
       if (result.code === 1) {
-        const user = result.data
+        const user = result.users
         commit(SAVE_USER,{user})
       }
     }
