@@ -10,11 +10,6 @@
         </div>
       </div>
       <div class="swiper-pagination"></div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-pagination"></div>
     </div>
     <!-- 导航 -->
     <div class="navContainer">
