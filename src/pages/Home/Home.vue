@@ -8,7 +8,7 @@
           <img @click="$router.push(token?'/profile' : '/login')" class="img1" :src="token ? 'https://image2.suning.cn/uimg/cms/img/157199322108277118.png':'https://image1.suning.cn/uimg/cms/img/157199321817918653.png'" alt="personal">
         </div>
         <div class="header-bottom" @click="$router.push('/search')">
-          <i class="iconfont icon-RectangleCopy"></i>
+          <i class="iconfont icon-tubiaolunkuo-"></i>
           <p>商品/店铺</p>
         </div>
       </div>
@@ -76,7 +76,7 @@
         <img @click="$router.replace('/category')" class="imgl" src="https://image2.suning.cn/uimg/cms/img/157199320847433454.png" alt="category">
       </div>
       <div class="center" @click="$router.push('/search')">
-        <i class="iconfont icon-RectangleCopy"></i>
+        <i class="iconfont icon-tubiaolunkuo-"></i>
         <span>蓝月亮</span>
       </div>
       <div class="imgr">
@@ -213,7 +213,7 @@
           position relative
           .iconfont
             position absolute
-            font-size 25px
+            font-size 18px
             top 50%
             left 0
             margin-left 10px
@@ -321,7 +321,7 @@
       background-repeat no-repeat
       background-size 100% 100%
       position fixed
-      bottom 60px
+      bottom 90px
       right 12px
       z-index 99
     .footerImg

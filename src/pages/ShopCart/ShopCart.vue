@@ -6,7 +6,7 @@
     <div class="content">
       <div class="content-top">
         <span>登陆后同步电脑与手机购物车的商品</span>
-        <span class="btn" @click="$router.replace('/login')">去登录</span>
+        <span class="btn" @click="$router.push('/login')">去登录</span>
       </div>
       <div class="cart-empty">
         <img src="https://oss.suning.com/vss/activity/wximg/cart/sn-cart-empty.png" alt="">

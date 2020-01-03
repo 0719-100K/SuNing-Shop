@@ -143,21 +143,22 @@
           top 0
           left 0
         ul 
-          width:750px;
-          height: 58px;
+          width 750px
+          height 58px
           background-color red
-          padding: 0;
-          margin: 0;
+          padding 0
+          margin 0
           .tabLi
-            height: 100%;
-            width 75px;
+            height 100%
+            width 75px
             float left
-            white-space: nowrap;
+            white-space nowrap
             &.active
-              background: #cd0031;
+              background #cd0031
             .liContent
-              width 75px;
-              height 100%;         
+              width 75px
+              height 100%
+              line-height 100%      
               text-align center
               img 
                 width 25px
