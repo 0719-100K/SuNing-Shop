@@ -21,7 +21,7 @@
           </div>
           <!-- 手机号,权益 -->
           <div class="Phone">
-              <div class="phone1">{{phone || user.name}}</div>
+              <div class="phone1" >{{user.phone || user.name}}</div>
               <span class="phone2">升级权益 > </span>
             </div>
         </div>
@@ -118,12 +118,12 @@
     computed : {
       ...mapState(['guessLike','user'])
     },
-    mounted() {
-      this.$store.dispatch('getGuessLike')
-      if (this.user.phone) {
-        this.phone = this.user.phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2')
-      }
-    },
+    // mounted() {
+    //   this.$store.dispatch('getGuessLike')
+    //   if (this.user.phone) {
+    //     this.phone = this.user.phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2')
+    //   }
+    // },
     data() {
       return {
         orderLists:[
