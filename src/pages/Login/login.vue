@@ -156,8 +156,8 @@
           result = await reqTextLogin(name,pwd)
           console.log(result)
           if (result.status === 1 ) {
-
-            const user = result.data
+            const user = result.data.users
+            user.name = this.name
             // 将user保存到vuex的state
             this.$store.dispatch('saveUser',user)
             this.$router.replace('/profile')
@@ -165,11 +165,10 @@
             MessageBox('提示',result.errMsg)
           }
         }else{
-          console.log('2222222222221');
-
           result = await reqSmsLogin(phone,yzmCode)
           if (result.code === 1 ) {
             const user = result.data
+            user.phone = this.phone
             // 将user保存到vuex的state
             this.$store.dispatch('saveUser',user)
             this.$router.replace('/profile')
