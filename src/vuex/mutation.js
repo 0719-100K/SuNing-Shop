@@ -1,5 +1,6 @@
 
 import {
+  SAVE_GOODS,
   REQ_BUYLIST,
   REQ_CoolMachine,
   REQ_TABBAR,
@@ -18,6 +19,9 @@ import {
 } from './mutation_type'
 
 export default {
+  [SAVE_GOODS](state,goodDetail){
+    state.goodDetail = goodDetail
+  },
   [REQ_BUYLIST](state,mustList){
     state.mustList = mustList 
   },

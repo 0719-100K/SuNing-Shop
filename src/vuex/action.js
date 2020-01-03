@@ -1,5 +1,6 @@
 
 import {
+  SAVE_GOODS,
   REQ_BUYLIST,
   REQ_CoolMachine,
   REQ_TABBAR,
@@ -17,9 +18,17 @@ import {
 import {reqBuyList,reqCoolMachine,
   reqTabBar,reqElectrics,
   reqCategory,reqGuessLike,
-  reqSearchList, reqClassList} from '../api/index'
+  reqSearchList, reqClassList,reqGoods} from '../api/index'
 
 export default{
+  // 商品详情
+  async getGoodDetail({commit}){
+    let result = await reqGoods()
+    if (result.status === 1) {
+      const goodDetail = result.datas.data.sugGoods[0].skus
+      commit(SAVE_GOODS,goodDetail)
+    }
+  },
  // 精选
  async getSelect({commit}){
   let result = await reqBuyList()

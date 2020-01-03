@@ -1,3 +1,4 @@
+export const SAVE_GOODS = 'save_goods'
 // 必选
 export const REQ_BUYLIST= 'buyList_select'
 // 酷机

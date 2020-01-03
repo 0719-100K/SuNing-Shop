@@ -4,7 +4,7 @@
       <img src="https://image3.suning.cn/uimg/cms/img/154518371251022769.png?format=_is_1242w_100h.webp" alt="">
     </div>
     <ul class="goods">
-      <li v-for="(good,index) in goods" :key="index">
+      <li v-for="(good,index) in goodDetail" :key="index">
         <img :src="good.pictureUrl" alt="">
         <p class="des">{{good.sugGoodsName}}</p>
         <div class="btns">
@@ -24,19 +24,13 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import {reqGoods,reqGoodInfo} from '@/api'
+  import {mapState} from 'vuex'
   export default {
-    data(){
-      return {
-        goods:[],
-        info:{}
-      }
+    computed:{
+      ...mapState(['goodDetail'])
     },
-    async mounted(){
-      let result = await reqGoods()
-      if (result.status === 1) {
-        this.goods = result.datas.data.sugGoods[0].skus
-      }
+    mounted(){
+      this.$store.dispatch('getGoodDetail')
     }
   }
 </script>
