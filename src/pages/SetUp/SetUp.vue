@@ -7,7 +7,7 @@
     </div>
     <div class="username">
       <img src="//image.suning.cn/uimg/cmf/cust_headpic/0000000000_01_240x240.jpg" alt="">
-      <p>{{user.phone ? user.phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2') : user.name}}</p>
+      <p>{{user.phone ? user.phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2') : user.username}}</p>
       <p class="icon">></p>
     </div>
     <ul class="list">

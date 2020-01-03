@@ -21,7 +21,7 @@
           </div>
           <!-- 手机号,权益 -->
           <div class="Phone">
-              <div class="phone1">{{user.phone ? user.phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2') : user.name}}</div>
+              <div class="phone1">{{user.phone ? user.phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2') : user.username}}</div>
               <span class="phone2">升级权益 > </span>
             </div>
         </div>
@@ -202,9 +202,9 @@
               color #222
               max-width 100px
               font-weight 600
-              overflow hidden
-              text-overflow ellipsis
-              white-space nowrap 
+              // overflow hidden
+              // text-overflow ellipsis
+              // white-space nowrap
               margin-bottom 8px
               margin-top 5px
             .phone2
