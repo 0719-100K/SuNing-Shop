@@ -2,7 +2,7 @@
   <div class="recommendContainer">
     <!-- 头部 -->
     <Header/>
-      <!-- 轮播图 -->
+    <!-- 轮播图 -->
     <div class="swiper-container" ref="lunbo1">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="(banner,index) in bannerList" :key="index">
@@ -149,6 +149,7 @@
 
   .recommendContainer
     // banner
+
     .swiper-container
       width 343px
       overflow hidden
