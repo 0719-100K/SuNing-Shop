@@ -14,7 +14,7 @@ import FooterGuider from './components/FooterGuider/NingFooter.vue'
 
 export default {
   name: 'app',
-  async mounted(){
+  mounted(){
     this.$store.dispatch('autoLogin')
   },
   components:{
