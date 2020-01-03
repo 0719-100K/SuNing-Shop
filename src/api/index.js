@@ -24,7 +24,7 @@ export const reqGuessLike = () => ajax('/profile/guessLike',{
 })
 
 // 请求短信验证码
-export const reqSmsCode = (phone) => ajax('/reqCode',{params:{phone}})
+export const reqSendCode = (phone) => ajax('/reqCode',{params:{phone}})
 // 请求短信登录
 export const reqSmsLogin = (phone,code) => ajax.post('/loginSms',{phone,code})
 // 请求用户名密码登录

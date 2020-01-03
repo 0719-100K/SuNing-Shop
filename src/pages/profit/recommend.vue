@@ -79,7 +79,7 @@
   import Swiper from 'swiper'
   import 'swiper/css/swiper.css'
   import BScroll from 'better-scroll'
-  import Header from '@/components/Header/Header.vue'
+  import Header from '@/components/Header1/Header.vue'
   import {reqRecommendBanner,reqRecommendGate,reqRecommendBank} from '@/api'
   export default {
     data(){
@@ -113,7 +113,8 @@
             delay: 2000
           },
           pagination:{
-            el:'.swiper-pagination'
+            el:'.swiper-pagination',
+            type:'custom'
           }
         })
         new Swiper(this.$refs.lunbo2,{
@@ -149,8 +150,8 @@
   .recommendContainer
     // banner
     .swiper-container
-      padding 0 16px
       width 343px
+      overflow hidden
       height 120px
       margin-top 60px
       img 
