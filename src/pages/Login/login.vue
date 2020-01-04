@@ -25,7 +25,7 @@
       <input v-model="phone" type="text" placeholder="请输入手机号"  maxlength="11" v-show="!isPwdLogin">
       <div class="yanzheng" v-show="!isPwdLogin">
         <!-- <button :disabled="!isRightPhone || count>0" :class="{'yzm-active':phone.length === 11}" @click.prevent="sendCode()"> -->
-        <button :class="{'yzm-active':phone.length === 11}" @click.prevent="sendCode()">
+        <button :disabled="count>0" :class="{'yzm-active':phone.length === 11}" @click.prevent="sendCode()">
           {{count > 0 ? count + 's' : '获取验证码'}}
         </button>
         <label class="label" for="yzmCode">
@@ -51,14 +51,14 @@
       <!-- 登录按钮 -->
       <div class="login" >
         <a class="phone-login" href="#" @click="login">登录</a>
-        <a class="select-login" href="#" @click="showPwdLogin">{{isPwdLogin ? '验证码登录' : '账号密码登录'}}</a>
+        <span class="select-login" href="#" @click="showPwdLogin">{{isPwdLogin ? '验证码登录' : '账号密码登录'}}</span>
       </div>
 
       
     </div>
     <!-- 底部 -->
     <div class="footer">
-      <p>其他登录方式</p>
+      <p class="other">其他登录方式</p>
       <div class="icons">
         <img src="./images/icon_qq.png" alt="">
         <img src="./images/icon_epp.png" alt="">
@@ -375,7 +375,7 @@
       bottom 17px
       margin-left -120px
       // background pink
-      p
+      .other
         text-align center
         height 18px
         color #999999
@@ -401,6 +401,8 @@
           width 33px
           height 33px
       .agree
+        span 
+          color #999999
         a
           color #101010
     

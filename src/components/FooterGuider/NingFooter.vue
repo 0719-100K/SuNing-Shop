@@ -29,7 +29,7 @@
       <p>购物车</p>
       <span class="count" v-show="count>0"><em>{{count}}</em></span>
     </span>
-    <span class='footer-item' :class="{on:$route.path==='/profile'}" @click="goto('/profile')">
+    <span class='footer-item' :class="{on:$route.path==='/profile'}" @click="$router.push(token ? '/profile' : 'login')">
       <span>
         <img v-if="$route.path!=='/profile'" class="icon" src="https://image2.suning.cn/uimg/cms/img/157543980229048220.png?from=mobile" alt="">
         <img v-else class="icon" src="https://image.suning.cn/uimg/cms/img/157105768594001788.png" alt="">
@@ -41,11 +41,15 @@
 </template>
 
 <script type="text/ecmascript-6">
+  import { mapState } from 'vuex'
   export default {
     data(){
       return {
         count:0
       }
+    },
+    computed:{
+      ...mapState(['token'])
     },
     methods:{
       goto(path){

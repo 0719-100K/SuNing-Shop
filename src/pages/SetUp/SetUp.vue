@@ -60,7 +60,7 @@
         MessageBox.confirm('确定执行此操作?').then(
           () => { // 点击确认
             this.$store.dispatch('logout')
-            this.$router.replace('/login')
+            this.$router.replace('/home')
           },
           () => { // 点击取消
             console.log('点击了取消')
