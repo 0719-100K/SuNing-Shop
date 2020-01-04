@@ -102,6 +102,7 @@
   import {reqHomeCategory} from '@/api'
   import { mapState } from 'vuex'
   export default {
+    name:'home',
     components:{
       Discount,
       Recommend,
