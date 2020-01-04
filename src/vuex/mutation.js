@@ -19,7 +19,7 @@ import {
   SAVE_GOODSDETAIL,
   REQ_DETAIL,
   ClEARDETAIL1,
-  SAVECATENAME
+  SAVECATENAME,
 } from './mutation_type'
 
 export default {
@@ -28,6 +28,10 @@ export default {
   },
   [REQ_BUYLIST](state,mustList){
     state.mustList = mustList 
+  },
+  // 必买清单详情
+  [REQ_DETAIL](state,obj1){
+    state.mustDetail = obj1
   },
   // 酷机
   [REQ_CoolMachine](state,phonelist){
@@ -99,8 +103,7 @@ export default {
     state.mustDetail = obj1
   },
   [ClEARDETAIL1](state){
-    state.goodDetail1 = {}
-    
+    state.goodDetail1 = {} 
   },
 
 }

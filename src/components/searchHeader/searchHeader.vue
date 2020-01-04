@@ -21,16 +21,20 @@ export default {
   },
   data() {
     return {
-      keyWord : this.categorySearchName || ''
+      keyWord : ''
     }
   },
-  // mounted() {
-  //   console.log(this.categorySearchName)
-  // },
+  
+  created() {
+    this.keyWord =  this.categorySearchName
+  },
   methods: {
     goback(){
+      // this.$router.push('/home')
       this.$router.go(-1)
-
+      // if (this.$route.path === '') {
+        
+      // }
       this.$store.commit(CLEARSEARCHLIST)
       this.keyWord =''
     },
@@ -45,9 +49,9 @@ export default {
     currentHotWord(newValue){  // 从search组件传来的，检测值的变化，实时更新到状态中
       this.keyWord = newValue
     },
-    // categorySearchName(nValue){
-    //   this.keyWord = nValue
-    // }
+    categorySearchName(nValue){
+      this.keyWord = nValue
+    }
   },
 }
 </script>
