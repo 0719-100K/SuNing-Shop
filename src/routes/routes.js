@@ -30,6 +30,8 @@ import Closes from '../pages/mustBuy/channel/closes.vue'
 
 
 import Category from '../pages/category/category.vue'
+import Detail from '../pages/mustBuy/channel/detail.vue'
+
 import Home from '../pages/Home/Home.vue'
 import Profile from '../pages/profile/profile.vue'
 import Setup from '../pages/SetUp/SetUp.vue'
@@ -70,6 +72,11 @@ export default [
         meta: {
             isShowFooter: false
         }
+    },
+    {
+        path:'/mustBuy/careChoice/:id',
+        props:true,
+        component: Detail,
     },
     {
         path:'/mustBuy',

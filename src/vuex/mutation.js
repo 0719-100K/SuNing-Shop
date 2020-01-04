@@ -18,7 +18,8 @@ import {
   RESET_USER,
   SAVE_GOODSDETAIL,
   REQ_DETAIL,
-  ClEARDETAIL1
+  ClEARDETAIL1,
+  SAVECATENAME,
 } from './mutation_type'
 
 export default {
@@ -27,6 +28,10 @@ export default {
   },
   [REQ_BUYLIST](state,mustList){
     state.mustList = mustList 
+  },
+  // 必买清单详情
+  [REQ_DETAIL](state,obj1){
+    state.mustDetail = obj1
   },
   // 酷机
   [REQ_CoolMachine](state,phonelist){
@@ -44,6 +49,9 @@ export default {
   [REQ_CATEGORY](state,category){
     state.category = category
   },
+  [SAVECATENAME](state,name){
+    state.categorySearchName = name
+  },
   // 个人中心的猜你喜欢
   [REQ_GUESSLIKE](state,data){
     state.guessLike = data
@@ -54,7 +62,8 @@ export default {
   },
   // 在返回后清除搜索的列表
   [CLEARSEARCHLIST](state){
-    state.searchList = []
+    state.searchList = [],
+    state.categorySearchName = ''
   },
 
   // 搜索排序
@@ -94,7 +103,7 @@ export default {
     state.mustDetail = obj1
   },
   [ClEARDETAIL1](state){
-    state.goodDetail1 = {}
+    state.goodDetail1 = {} 
   },
 
 }

@@ -144,7 +144,6 @@
 <style scoped lang="stylus" rel="stylesheet/stylus">
   .myContainer
     width 100%
-    height 100%
     background-color #eee
     .header
       position relative
@@ -332,10 +331,10 @@
       position relative
       left 3%
       top 10px
-      bottom 10px
       display flex
       flex-wrap wrap
       justify-content space-between
+      padding 0 0 50px 0
       .recommendItem
         width 48%
         border-radius 10px

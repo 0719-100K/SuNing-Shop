@@ -1,13 +1,14 @@
 <template>
   <div class='phoneContainer' v-if="mustList.buyList.skus">
-    <a href="//c.m.suning.com/bcdetail.html?contentId=5221687499&itemType=bq" class="app-list"
+    <div class="app-list"
      v-for="(sk,index) in mustList.buyList.skus" :key="index"
+     @click="$router.replace(`/mustBuy/careChoice/${sk.id}`)"
     >
       <div class="f34">
          <span >{{sk.title}}</span>
       </div>
       <ul class="pic-img">
-        <li v-for="(gd,index) in sk.gds" :key="index">
+        <li v-for="(gd,index) in sk.gds" :key="index"  >
           <div class="zhezhao"></div>
           <img :src="gd.pictureUrl" alt=""> 
           <div class='pro-price'>
@@ -18,7 +19,7 @@
         </li>
 
       </ul>
-    </a>
+    </div>
       
   </div>
 </template>

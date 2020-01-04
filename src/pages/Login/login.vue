@@ -39,7 +39,7 @@
       </div>
 
       <!-- 账号密码登录 -->
-      <input v-model="name" type="text" placeholder="请输入手机号/用户名/邮箱" v-show="isPwdLogin" >
+      <input v-model="name" type="text" placeholder="请输入用户名" v-show="isPwdLogin" >
       <div class="pwd-login" v-show="isPwdLogin" >
         <input :type="isShowPwd ? 'text' : 'password' " placeholder="请输入密码" v-model="pwd">
         <div class="eye">

@@ -2,9 +2,9 @@
   <div class="footer">
     <span class='footer-item' :class="{on:$route.path==='/home'}" @click="goto('/home')">
       <span>
-        <img v-if="$route.path==='/home'" class="icon" src="https://image3.suning.cn/uimg/cms/img/157543975265772267.png?from=mobile" alt="">
-        <img v-else-if=false class="icon" src="https://image3.suning.cn/uimg/cms/img/157543974786039763.png?from=mobile" alt="">
-        <img v-else="$route.path!=='/home'" class="icon" src="https://image.suning.cn/uimg/cms/img/157105696599538235.png" alt="">
+        <!-- <img v-if="$route.path==='/home'" class="icon" src="https://image3.suning.cn/uimg/cms/img/157543975265772267.png?from=mobile" alt=""> -->
+        <img v-if="$route.path==='/home'" class="icon" src="https://image3.suning.cn/uimg/cms/img/157543974786039763.png?from=mobile" alt="">
+        <img v-else class="icon" src="https://image.suning.cn/uimg/cms/img/157105696599538235.png" alt="">
       </span>
       <p :class="{high:$route.path==='/home'}">首页</p>
     </span>

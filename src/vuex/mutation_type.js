@@ -17,6 +17,8 @@ export const REQ_TABBAR = 'tabbar'
 // 分类
 export const REQ_CATEGORY = 'category'
 
+export const SAVECATENAME = 'savecatename'
+
 export const REQ_GUESSLIKE= 'reqguesslike'
 
 export const REQ_SEARCHLIST= 'reqsearchlist'
