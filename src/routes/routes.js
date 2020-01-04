@@ -39,7 +39,7 @@ import Profit from '../pages/profit/recommend.vue'
 
 //领券中心下级
 import Persons from '../pages/CouponCentre/Persons.vue'
-
+import CartList from '../pages/CartList/CartList.vue'
 
 
 export default [
@@ -126,6 +126,10 @@ export default [
         meta: {
             isShowFooter: true
         }
+    },
+    {
+        path:'/cartlist',
+        component: CartList
     },
     {
         path:'/profile',
