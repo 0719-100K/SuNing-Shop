@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <keep-alive>
+    <!-- <keep-alive exclude="GoodDeatail"> -->
       <router-view></router-view>
-    </keep-alive>
+    <!-- </keep-alive> -->
     
 		<!-- <GoodDetails></GoodDetails> -->
 		<FooterGuider v-show="$route.meta.isShowFooter"></FooterGuider>

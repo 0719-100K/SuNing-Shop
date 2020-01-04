@@ -15,7 +15,10 @@ import {
   SAVE_USER,
   SAVE_TOKEN,
   RESET_TOKEN,
-  RESET_USER
+  RESET_USER,
+  SAVE_GOODSDETAIL,
+  REQ_DETAIL,
+  ClEARDETAIL1
 } from './mutation_type'
 
 export default {
@@ -82,4 +85,16 @@ export default {
   [RESET_TOKEN](state){
     state.token = ''
   },
+  // 商品详情
+  [SAVE_GOODSDETAIL](state,obj){
+    state.goodDetail1 = obj
+  },
+  // 详情
+  [REQ_DETAIL](state,obj1){
+    state.mustDetail = obj1
+  },
+  [ClEARDETAIL1](state){
+    state.goodDetail1 = {}
+  },
+
 }

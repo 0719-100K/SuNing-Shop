@@ -1,4 +1,11 @@
 export const SAVE_GOODS = 'save_goods'
+
+// 首页的商品详情
+export const SAVE_GOODSDETAIL = 'save_goods_detail'
+export const ClEARDETAIL1 = 'cleardetail1'
+
+// 必选清单的详情
+export const REQ_DETAIL = 'detail'
 // 必选
 export const REQ_BUYLIST= 'buyList_select'
 // 酷机

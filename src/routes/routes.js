@@ -153,7 +153,8 @@ export default [
         component: Login,
     },
     {
-        path:'/gooddetail',
+        path:'/home/gooddetail/:id',
+        props:true,
         component: GoodDetail,
         children:[
             {
@@ -173,7 +174,29 @@ export default [
                 redirect: 'imgs', 
             }
         ]
-    }
+    },
+    // {
+    //     path:'/gooddetail',
+    //     component: GoodDetail,
+    //     children:[
+    //         {
+    //             path:'imgs',
+    //             component: Imgs,
+    //         },
+    //         {
+    //             path:'parameter',
+    //             component: Parameter,
+    //         },
+    //         {
+    //             path:'questions',
+    //             component:Questions,
+    //         },
+    //         {
+    //             path:'',
+    //             redirect: 'imgs', 
+    //         }
+    //     ]
+    // }
 ]
 
 
