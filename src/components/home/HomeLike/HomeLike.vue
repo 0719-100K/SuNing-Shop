@@ -13,7 +13,7 @@
           <span class="text" v-if="good.promotionList">{{good.promotionList[0].simple}}</span> 
         </div>
         <div class="footer">
-          <span class="flag">￥{{good.price}}</span>
+          <span class="flag">￥</span>
           <span class="price">{{good.price}}</span>
           <span class="comments">{{good.comments}}评论</span>
         </div>
