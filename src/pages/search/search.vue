@@ -1,10 +1,11 @@
 <template>
   <div id="searchContainer">
+    <SearchHeader :isShow="!searchList.length" :currentHotWord="currentHotWord" ></SearchHeader>
+
     <div class="readySearch" v-if="!searchList.length">
                                         <!-- 这个值是用户点击热词时传到搜索头部显示 -->
-      <SearchHeader :isShow="!searchList.length" :currentHotWord="currentHotWord"></SearchHeader>
-
-      <div class="bodyContainer">
+      
+      <div class="bodyContainer" >
         <div class="hotSearch">热门搜索</div>
         <div class="hotContent">
           <div class="hotItem" v-for="(hotItem,index) in hotItems" :key="index" :style="`color : ${hotItem.color}`" @click="clickHotSearch(hotItem.text)">{{hotItem.text}}</div>
@@ -15,7 +16,7 @@
 
     <div class="hasSearched" v-else>
 
-      <SearchHeader></SearchHeader>
+      <!-- <SearchHeader></SearchHeader> -->
 
       <div class="searchNav">
         <div class="tab-item" v-for="(navItem,index) in navItems" :key="index" @click="tabClick(index)" :class="{active:currentIndex === index}">{{navItem}}</div>
@@ -67,7 +68,7 @@
 
 <script>
 import {mapState} from 'vuex'
-import {SORTSEARCH} from '../../vuex/mutation_type'
+// import {SORTSEARCH} from '../../vuex/mutation_type'
 export default {
   computed:{
     ...mapState({
@@ -98,29 +99,21 @@ export default {
     }
   },
   methods: {
+   
     tabClick(index){
       this.currentIndex = index
-      // if (index == 2) {
-      //   console.log('点的是2')
-      //   this.searchList.sort((a,b)=>{
-      //     const a1 = a.price
-      //     const a2 = a2.price
-
-          
-      //   })
-      //   this.$store.commit(SORTSEARCH,)
-      }
+      
     },
-    // 点击热词---将点击的词存到状态便于头部展示、发送搜索请求
+     // 点击热词---将点击的词存到状态便于头部展示、发送搜索请求
     clickHotSearch(text){
+      console.log('111');
       this.currentHotWord = text
       // 将请求回来的数据存到vuex中
       this.$store.dispatch('getSearchList',text)
     }
-  
-  // watch: {
-  //   searchList(){}
-  // },
+  },
+   
+
 }
 </script>
 

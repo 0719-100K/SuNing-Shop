@@ -2,6 +2,7 @@
   <!-- 赚钱头部 -->
   <div class="header">
     <!-- 个性推荐 -->
+    <div class="back" @click="$router.back()"><</div>
     <div class="header-left" :class="{active:isShowRecommend}" @click="goto('/recommend')">
       <span>个性推荐</span>
       <div class="line" v-show="isShowRecommend"></div>
@@ -49,6 +50,12 @@
     z-index 9
     background white
     padding 0 16px
+    .back
+      width 30px
+      height 60px
+      color #999
+      line-height 60px
+      font-size 25px
     .header-left
       width 56px
       height 60px

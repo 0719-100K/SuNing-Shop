@@ -3,9 +3,9 @@
   <img src="../../common/images/nav-back2.png" alt="" @click="goback">
   <div class="inputContainer">
     <i class="iconfont icon-tubiaolunkuo-"></i>
-    <input type="text" v-model="keyWord" placeholder="请输入内容搜索"/>
+    <input type="text" v-model="keyWord" placeholder="请输入内容搜索" />
   </div>
-  <span class="search" v-if="isShow">搜索</span>
+  <span class="search" v-if="isShow" @click="search">搜索</span>
   <span class="iconfont icon-classify_icon" v-else></span>
 </div>
 </template>
@@ -21,8 +21,15 @@ export default {
   methods: {
     goback(){
       this.$router.go(-1)
-  
+
       this.$store.commit(CLEARSEARCHLIST)
+      this.keyWord =''
+    },
+    search(){
+      if (this.keyWord.trim() !== '') {
+        this.$store.dispatch('getSearchList',this.keyWord)
+      }
+      
     }
   },
   watch: {
@@ -40,20 +47,24 @@ export default {
   justify-content space-between
   align-items center
   bottom-border-1px(#999)
+  background-color #fff
   img
     width 48px
   .inputContainer
     background-color #eee
     border-radius 5px
+    width 60%
     .icon-tubiaolunkuo-
       font-size 12px
       margin 9px 7.5px
     input 
       background-color #eee
-      height 30px
+      height 35px
+      
+      border-radius 5px
       outline none
   .search
-    font-size 18px
+    font-size 16px
     padding-right 20px
   .icon-classify_icon
     font-size  22px

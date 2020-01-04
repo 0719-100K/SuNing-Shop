@@ -8,7 +8,7 @@
           <img @click="$router.push(token?'/profile' : '/login')" class="img1" :src="token ? 'https://image2.suning.cn/uimg/cms/img/157199322108277118.png':'https://image1.suning.cn/uimg/cms/img/157199321817918653.png'" alt="personal">
         </div>
         <div class="header-bottom" @click="$router.push('/search')">
-          <i class="iconfont icon-RectangleCopy"></i>
+          <i class="iconfont icon-tubiaolunkuo-"></i>
           <p>商品/店铺</p>
         </div>
       </div>
@@ -73,14 +73,14 @@
     <!-- 下拉到指定位置的头部 -->
     <div v-show="scrolly>=700" class="scroll-header">
       <div class="imgl">
-        <img @click="$router.replace('/category')" class="imgl" src="https://image2.suning.cn/uimg/cms/img/157199320847433454.png" alt="category">
+        <img @click="$router.push('/category')" class="imgl" src="https://image2.suning.cn/uimg/cms/img/157199320847433454.png" alt="category">
       </div>
       <div class="center" @click="$router.push('/search')">
-        <i class="iconfont icon-RectangleCopy"></i>
+        <i class="iconfont icon-tubiaolunkuo-"></i>
         <span>蓝月亮</span>
       </div>
       <div class="imgr">
-        <img @click="$router.replace('/login')" class="imgr" src="https://image1.suning.cn/uimg/cms/img/157199321817918653.png" alt="personal">
+        <img @click="$router.push(token?'/profile' : '/login')" class="img1" :src="token ? 'https://image2.suning.cn/uimg/cms/img/157199322108277118.png':'https://image1.suning.cn/uimg/cms/img/157199321817918653.png'" alt="personal">
       </div>
     </div>
     <!-- 置顶 -->
@@ -102,6 +102,7 @@
   import {reqHomeCategory} from '@/api'
   import { mapState } from 'vuex'
   export default {
+    name:'home',
     components:{
       Discount,
       Recommend,
@@ -117,11 +118,8 @@
     computed:{
       ...mapState(['token'])
     },
-    async mounted(){
-      let result = await reqHomeCategory()
-      if (result.status === 1) {
-        this.cate = result.datas.enter_list.tag
-      }
+    mounted(){
+      this.initCate()
       new Swiper(this.$refs.horizontal, {
         autoplay: {
           disableOnInteraction: false,
@@ -131,11 +129,17 @@
         },
         loop: true
       })
-      if (this.cate.length>0) {
+      if (this.cate.length>0){
         this.initScroll()
       }
     },
     methods:{
+      async initCate(){
+        let result = await reqHomeCategory()
+        if (result.status === 1) {
+          this.cate = result.datas.enter_list.tag
+        }
+      },
       initScroll(){
         if (!this.homeScroll) {
           console.log('scroll');
@@ -174,9 +178,12 @@
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   .wrapper
+    position absolute
+    top 0
+    left 0
     width 100%
-    height calc(100vh - 44px)
     overflow hidden
+    height calc(100vh - 44px)
     background-color rgb(247, 247, 247) 
     .wrap
       .header
@@ -213,7 +220,7 @@
           position relative
           .iconfont
             position absolute
-            font-size 25px
+            font-size 18px
             top 50%
             left 0
             margin-left 10px
@@ -321,7 +328,7 @@
       background-repeat no-repeat
       background-size 100% 100%
       position fixed
-      bottom 60px
+      bottom 90px
       right 12px
       z-index 99
     .footerImg

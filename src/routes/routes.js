@@ -27,6 +27,8 @@ import CoolMachine from '../pages/mustBuy/channel/phone.vue'
 import Electrics from '../pages/mustBuy/channel/electrics.vue'
 import Supermarket from '../pages/mustBuy/channel/supermarket.vue'
 import Closes from '../pages/mustBuy/channel/closes.vue'
+
+
 import Category from '../pages/category/category.vue'
 import Home from '../pages/Home/Home.vue'
 import Profile from '../pages/profile/profile.vue'

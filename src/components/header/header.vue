@@ -72,6 +72,16 @@
           this.$router.replace('/mustBuy/coolMachine')
           // this. selectedId = index
         }
+        if(index=== 3 && this.$route.path !== '/mustBuy/supermarket'){
+          this. selectedId = 3
+          this.$router.replace('/mustBuy/supermarket')
+          // this. selectedId = index
+        }
+        if(index=== 4 && this.$route.path !== '/mustBuy/closes'){
+          this. selectedId = 4
+          this.$router.replace('/mustBuy/closes')
+          // this. selectedId = index
+        }
         this. selectedId = index
         
       },
@@ -143,21 +153,22 @@
           top 0
           left 0
         ul 
-          width:750px;
-          height: 58px;
+          width 750px
+          height 58px
           background-color red
-          padding: 0;
-          margin: 0;
+          padding 0
+          margin 0
           .tabLi
-            height: 100%;
-            width 75px;
+            height 100%
+            width 75px
             float left
-            white-space: nowrap;
+            white-space nowrap
             &.active
-              background: #cd0031;
+              background #cd0031
             .liContent
-              width 75px;
-              height 100%;         
+              width 75px
+              height 100%
+              line-height 100%      
               text-align center
               img 
                 width 25px

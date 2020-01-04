@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <keep-alive>
+    <keep-alive exclude="home">
       <router-view></router-view>
     </keep-alive>
     
@@ -14,8 +14,8 @@ import FooterGuider from './components/FooterGuider/NingFooter.vue'
 
 export default {
   name: 'app',
-  async mounted(){
-    // this.$store.dispatch('autoLogin')
+  mounted(){
+    this.$store.dispatch('autoLogin')
   },
   components:{
     FooterGuider,
