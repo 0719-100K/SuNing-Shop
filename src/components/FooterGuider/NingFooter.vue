@@ -50,7 +50,7 @@
     methods:{
       goto(path){
         if (path!==this.$route.path) {
-          this.$router.replace(path)
+          this.$router.push(path)
         }else{
           window.location = path
         }

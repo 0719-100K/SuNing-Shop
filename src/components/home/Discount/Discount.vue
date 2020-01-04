@@ -212,4 +212,5 @@
     width 100%
     img 
       width 50%
+      height 78px
 </style>

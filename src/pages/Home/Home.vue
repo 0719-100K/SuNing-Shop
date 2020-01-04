@@ -73,7 +73,7 @@
     <!-- 下拉到指定位置的头部 -->
     <div v-show="scrolly>=700" class="scroll-header">
       <div class="imgl">
-        <img @click="$router.replace('/category')" class="imgl" src="https://image2.suning.cn/uimg/cms/img/157199320847433454.png" alt="category">
+        <img @click="$router.push('/category')" class="imgl" src="https://image2.suning.cn/uimg/cms/img/157199320847433454.png" alt="category">
       </div>
       <div class="center" @click="$router.push('/search')">
         <i class="iconfont icon-tubiaolunkuo-"></i>
@@ -177,9 +177,12 @@
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   .wrapper
+    position absolute
+    top 0
+    left 0
     width 100%
-    height calc(100vh - 44px)
     overflow hidden
+    height calc(100vh - 44px)
     background-color rgb(247, 247, 247) 
     .wrap
       .header
