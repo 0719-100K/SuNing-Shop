@@ -16,7 +16,7 @@
 				  v-show="isShow" 
 					 class="search"
 					 >
-					<input  type="text" placeholder="搜索">
+					<input @click="toSearch"  type="text" placeholder="搜索">
 					<ul class="searchList" >
 						<li
 						 v-for="(ListItem, index) in navList" :key="index"
@@ -51,17 +51,16 @@
 						class="items"
 						v-for="(listItem,index) in navList" :key='index'
 						@click="navItem(index)"
-						v-bind:class="{active:index==currentItem}"
+						v-bind:class="{active:index===navListIndex}"
 					>
 						<div class="itemText ">
 							{{listItem.className}}
 						</div>
-						<div v-show="index==currentItem" class="underline"></div>
+						<div v-show="index==navListIndex" class="underline"></div>
 					</div>
 				</div>
 		</div>
 	</div>
-
   <!-- 主体内容 -->
   <div class="shopListBox" v-for="(item,index) in classList " :key="index">
 
@@ -135,7 +134,6 @@
 			</div>
 		</div>
 	</div>
-
 </div>
 </template>
 <script>
@@ -150,7 +148,10 @@ import  'swiper/css/swiper.css'
 			 name: 'contentContainer',
 		data(){
 			return {
+				scrollX:0,
+				lefts:[],
 				currentItem:0,
+				navListIndex:0,
 				isShow:false,
 				isOff:false,
 				navList:[
@@ -176,7 +177,12 @@ import  'swiper/css/swiper.css'
 	},
 		computed: {
 			...mapState(["classList"]),
-			},
+					currentItem(){
+				const {scrollX,lefts} = this
+				const index = lefts.findIndex((left,index)=>scrollX>=left && scrollX<lefts[index+1])
+					console.log(scrollX,index)
+			}
+		},
 		async mounted(){
 					await  this.$store.dispatch("getClassList")
 					//横向滚动
@@ -189,48 +195,52 @@ import  'swiper/css/swiper.css'
 						//分页
 						paination:{
 							el:'.swiper-pagination'
-						}
+						},
+						lazy: true
 					})
-			},
+		},
 		methods: {
+			//nav
 			navItem:function(index){
-				this.currentItem = index
-
+				this.navListIndex = index
+				this.currentItem = this.navListIndex
 			},
+			//search
 			searchItem(index){
 			let current=	this.currentItem = index
-			let offset = this.$refs.items
-			console.log(this.$el.clientWidth)
+			this.navListIndex = current
 				if (this.isShow) {
 					this.isShow = false
-					if (this.$refs.items) {
-						
-						console.log(this)
-					}
 				}
-		
-
-
 			},
+			//返回home
 			backHome(){
 				this.$router.push('/home')
 			},
+			//是否展示搜索列表
 			isShowListItem(){
 				this.isShow = !this.isShow
 			},
+			//点击遮罩页面消失
 			isOffShow(){
 				if (this.isShow) {
 					this.isShow = false
 				}
 			},
+			//跳转到persons
 			handleMy(){
 				this.$router.push('/home/centre/persons')
 			},
+			//给每个model_box加自己的class
 			setClass(key) {
             let obj = {face: true}
             obj[`modal_box${key}`] = true
             return obj
-        },
+			},
+			//点击搜索中input去search
+			toSearch(){
+				this.$router.push('/search')
+			}
   }
 }
 </script>
