@@ -72,6 +72,16 @@
           this.$router.replace('/mustBuy/coolMachine')
           // this. selectedId = index
         }
+        if(index=== 3 && this.$route.path !== '/mustBuy/supermarket'){
+          this. selectedId = 3
+          this.$router.replace('/mustBuy/supermarket')
+          // this. selectedId = index
+        }
+        if(index=== 4 && this.$route.path !== '/mustBuy/closes'){
+          this. selectedId = 4
+          this.$router.replace('/mustBuy/closes')
+          // this. selectedId = index
+        }
         this. selectedId = index
         
       },

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <keep-alive>
+    <!-- <keep-alive exclude="GoodDeatail"> -->
+    <keep-alive exclude="home,GoodDeatail">
       <router-view></router-view>
     </keep-alive>
     

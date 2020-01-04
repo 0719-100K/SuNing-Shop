@@ -12,7 +12,10 @@ import {
   SAVE_USER,
   SAVE_TOKEN,
   RESET_TOKEN,
-  RESET_USER
+  RESET_USER,
+  SAVE_GOODSDETAIL,
+  REQ_DETAIL
+
   
 }
  from './mutation_type'
@@ -36,6 +39,30 @@ export default{
     if (result.status === 1) {
       const goodDetail = result.datas.data.sugGoods[0].skus
       commit(SAVE_GOODS,goodDetail)
+    }
+  },
+  // 商品详情
+  async getGoodDetail1({commit},id){
+    let result = await reqGoods()
+    if (result.status === 1) {
+      let goodDetail2 = result.datas.data.sugGoods[0].skus
+      let obj = goodDetail2.find( item=> item.id == id)
+      commit(SAVE_GOODSDETAIL,obj)
+
+      console.log(goodDetail2)
+      console.log(obj)
+    }
+  },
+  // 详情
+  async getSelectDetail({commit},id){
+    let result = await reqBuyList()
+    if (result.status === 1) {
+      let goodDetail2 = result.datas.buyList.skus
+      let obj1 = goodDetail2.find( item=> item.id == id)
+      commit(REQ_DETAIL,obj1)
+
+      console.log(goodDetail2)
+      console.log(obj1)
     }
   },
  // 精选
@@ -80,6 +107,7 @@ async getCategory({commit}){
   }
  },
 
+  //  个人中心的猜你喜欢
   async getGuessLike({commit}){
   let result = await reqGuessLike()
   if(result && result.status === 1){
@@ -88,11 +116,12 @@ async getCategory({commit}){
     commit(REQ_GUESSLIKE,data)
   }
   },
+
+  // 点击热词和输入框输入内容搜索
   async getSearchList({commit},keyword){
     let result = await reqSearchList(keyword)
     if(result.status === 1){
       const data = result.datas.skus
-      console.log(data)
       commit(REQ_SEARCHLIST,data)
     }
   },
@@ -130,6 +159,7 @@ async getCategory({commit}){
       const data = result.datas.blankList
       commit(REQ_RECEIVE_CLASSLIST,data)
     }
-  }
+  },
+
 
 }

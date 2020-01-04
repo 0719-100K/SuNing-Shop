@@ -9,13 +9,16 @@ import {
   REQ_GUESSLIKE,
   REQ_SEARCHLIST,
   CLEARSEARCHLIST,
-  SORTSEARCH,
+  // SORTSEARCH,
   REQ_RECEIVE_GOODS ,
   REQ_RECEIVE_CLASSLIST, 
   SAVE_USER,
   SAVE_TOKEN,
   RESET_TOKEN,
-  RESET_USER
+  RESET_USER,
+  SAVE_GOODSDETAIL,
+  REQ_DETAIL,
+  ClEARDETAIL1
 } from './mutation_type'
 
 export default {
@@ -41,21 +44,23 @@ export default {
   [REQ_CATEGORY](state,category){
     state.category = category
   },
-
+  // 个人中心的猜你喜欢
   [REQ_GUESSLIKE](state,data){
     state.guessLike = data
   },
+  // 搜索的列表
   [REQ_SEARCHLIST](state,data){
     state.searchList = data
   },
+  // 在返回后清除搜索的列表
   [CLEARSEARCHLIST](state){
     state.searchList = []
   },
 
   // 搜索排序
-  [SORTSEARCH](state,newData){
-    state.searchList =newData
-  },
+  // [SORTSEARCH](state,newData){
+  //   state.searchList =newData
+  // },
   
   // 领券中心
   [REQ_RECEIVE_GOODS](state,data){
@@ -80,4 +85,16 @@ export default {
   [RESET_TOKEN](state){
     state.token = ''
   },
+  // 商品详情
+  [SAVE_GOODSDETAIL](state,obj){
+    state.goodDetail1 = obj
+  },
+  // 详情
+  [REQ_DETAIL](state,obj1){
+    state.mustDetail = obj1
+  },
+  [ClEARDETAIL1](state){
+    state.goodDetail1 = {}
+  },
+
 }

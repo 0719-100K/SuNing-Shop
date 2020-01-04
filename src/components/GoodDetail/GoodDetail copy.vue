@@ -1,22 +1,22 @@
 <template>
-	<div id="detailContainer" >
-		<header class="pageHeader" >
+	<div id="detailContainer">
+		<header class="pageHeader">
 			<div class="imgContainer">
-				<img src="../../common/images/nav-back.png" alt="" @click="backAndClearDetail1">
+				<img src="../../common/images/nav-back.png" alt="">
 				<img src="../../common/images/nav-more.png" alt="">
 			</div>
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-						<div class="swiper-slide"><img :src="goodDetail1.pictureUrl" ></div>
+						<div class="swiper-slide"><img src="../../common/images/201812190413013087_x.jpg" ></div>
 				</div>
 				<!-- 如果需要导航按钮 -->
 				<div class="swiper-button-prev"></div>
 				<div class="swiper-button-next"></div>
 			</div>
 		</header>
-		<div class="section" >
+		<section class="section">
 			<div class="price">
-				<span class="priceLeft">￥{{goodDetail1.price}}</span>
+				<span class="priceLeft">￥14.90</span>
 				<span class="priceRight">降价通知</span>
 			</div>
 			<div class="vip">
@@ -36,21 +36,19 @@
 			<div class="productTitle">
 				<div class="titleLeft">
 					<span class="overSea">苏宁国际直营</span>
-					<span class="title">{{goodDetail1.sugGoodsName}}</span>
+					<span class="title">【大白牙膏】LION 狮王 WHITE & WHITE 洁白 牙膏 150g/支 口气清新</span>
 				</div>
 				<div class="titleRight">
-					<img src="" alt="">
+					<img src="../../common/images/favrite.png" alt="">
 				</div>
 			</div>
 			<div class="productIntroduce">
 				<span class="hotDrap">【爆款直降】</span>
-				<span class="introduce">{{goodDetail1.sugGoodsName}}</span>
+				<span class="introduce">口腔护理专家，120年信赖！这款狮王防蛀立式牙膏，采用防蛀去渍配方，能有效去除牙垢和牙齿黏着物，同时添加维生素E，能促进牙龈血液的循环，防蛀同时更维护牙龈健康，让牙齿更健康！</span>
 				<p class="activity">国际美妆囤货-爆款满300减30> ></p>
 			</div>
-		</div>
-
-
-		<div class="credit" >
+		</section>
+		<div class="credit">
 			<img src="../../common/images/oversea-logo.png" alt="">
 			<span class="creditRight">
 				<span>海外正品 · 国际直营 · 售后无忧</span>
@@ -64,8 +62,8 @@
 						<span>还差1件参加满减活动</span>
 						<span class="getTicket">领券</span>
 					</div>
-					<div class="detail2" >
-						<span class="money">￥{{goodDetail1.price}}</span>
+					<div class="detail2">
+						<span class="money">￥20</span>
 						<span class="money1">满200减20</span>
 					</div>
 					<div class="detail3">
@@ -149,9 +147,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="judgement" >
+		<div class="judgement">
 			<div class="header">
-				<span class="left">评价({{goodDetail1.comments}}+)</span>
+				<span class="left">评价(6400+)</span>
 				<span class="right">99%好评率 ></span>
 			</div>
 			<section class="judgementDetail">
@@ -201,10 +199,10 @@
 			<div class="watchAllJudgement">查看全部评价
 			</div>
 		</div>
-		<div class="questions" >
+		<div class="questions">
 			<div class="answers">
 				<span class="left">问答</span>
-				<span class="right">共16条问答</span>
+				<span class="right">共8条问答</span>
 			</div>
 			<div class="questionItem">
 				<div class="left">
@@ -248,25 +246,10 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
 	// name:'goodDetail'
 	// import Swiper from 'swiper'
 	// import 'swiper/css/swiper.css';
-	import {ClEARDETAIL1} from '../../vuex/mutation_type'
 	export default {
-
-		props:['id'],	
-
-    computed: {
-
-			// ...mapState(['goodDetail1'])
-			...mapState({
-          goodDetail1: state=>state.goodDetail1 
-			})
-		
-					
-		},
-
 		data() {
 			return {
 				currentIndex:0,
@@ -277,16 +260,14 @@ import { mapState } from 'vuex'
 				]
 			}
 		},
-		mounted() {
-			 this.$store.dispatch('getGoodDetail1',this.id)
-			 	console.log(this.goodDetail1)
-		},
 		methods: {
-			backAndClearDetail1(){
-				this.$router.go(-1)
-				this.$store.commit(ClEARDETAIL1)
+			underLine(index){
+				this.currentIndex = index
 			}
+     
+
 		},
+
 		// mounted() {
 		// 	new Swiper('.swiper-container',{
 		// 		navigation: {  // 设置前进后退的按钮

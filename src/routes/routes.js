@@ -27,6 +27,8 @@ import CoolMachine from '../pages/mustBuy/channel/phone.vue'
 import Electrics from '../pages/mustBuy/channel/electrics.vue'
 import Supermarket from '../pages/mustBuy/channel/supermarket.vue'
 import Closes from '../pages/mustBuy/channel/closes.vue'
+
+
 import Category from '../pages/category/category.vue'
 import Home from '../pages/Home/Home.vue'
 import Profile from '../pages/profile/profile.vue'
@@ -155,7 +157,8 @@ export default [
         component: Login,
     },
     {
-        path:'/gooddetail',
+        path:'/home/gooddetail/:id',
+        props:true,
         component: GoodDetail,
         children:[
             {
@@ -175,7 +178,29 @@ export default [
                 redirect: 'imgs', 
             }
         ]
-    }
+    },
+    // {
+    //     path:'/gooddetail',
+    //     component: GoodDetail,
+    //     children:[
+    //         {
+    //             path:'imgs',
+    //             component: Imgs,
+    //         },
+    //         {
+    //             path:'parameter',
+    //             component: Parameter,
+    //         },
+    //         {
+    //             path:'questions',
+    //             component:Questions,
+    //         },
+    //         {
+    //             path:'',
+    //             redirect: 'imgs', 
+    //         }
+    //     ]
+    // }
 ]
 
 

@@ -73,7 +73,7 @@
     <!-- 下拉到指定位置的头部 -->
     <div v-show="scrolly>=700" class="scroll-header">
       <div class="imgl">
-        <img @click="$router.replace('/category')" class="imgl" src="https://image2.suning.cn/uimg/cms/img/157199320847433454.png" alt="category">
+        <img @click="$router.push('/category')" class="imgl" src="https://image2.suning.cn/uimg/cms/img/157199320847433454.png" alt="category">
       </div>
       <div class="center" @click="$router.push('/search')">
         <i class="iconfont icon-tubiaolunkuo-"></i>
@@ -102,6 +102,7 @@
   import {reqHomeCategory} from '@/api'
   import { mapState } from 'vuex'
   export default {
+    name:'home',
     components:{
       Discount,
       Recommend,
@@ -178,9 +179,10 @@
 <style scoped lang="stylus" rel="stylesheet/stylus">
   .wrapper
     width 100%
-    height calc(100vh - 44px)
     overflow hidden
-    background-color rgb(247, 247, 247) 
+    height calc(100vh - 50px)
+    background-color rgb(247, 247, 247)
+    position relative
     .wrap
       .header
         width 100%
@@ -330,11 +332,10 @@
     .footerImg
       width 100%
       height 45px
-      background-color #333
+      position fixed
+      bottom 50px
+      left 0
       img   
         width 100%
         height 45px
-        position absolute
-        bottom 50px
-        left 0
 </style>

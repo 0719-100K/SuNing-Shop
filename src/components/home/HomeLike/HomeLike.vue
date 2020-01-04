@@ -4,7 +4,7 @@
       <img src="https://image3.suning.cn/uimg/cms/img/154518371251022769.png?format=_is_1242w_100h.webp" alt="">
     </div>
     <ul class="goods">
-      <li v-for="(good,index) in goodDetail" :key="index">
+      <li v-for="(good,index) in goodDetail" :key="index" @click="$router.push(`/home/gooddetail/${good.id}`)">
         <img :src="good.pictureUrl" alt="">
         <p class="des">{{good.sugGoodsName}}</p>
         <div class="btns">
@@ -13,7 +13,7 @@
           <span class="text" v-if="good.promotionList">{{good.promotionList[0].simple}}</span> 
         </div>
         <div class="footer">
-          <span class="flag">￥</span>
+          <span class="flag">￥{{good.price}}</span>
           <span class="price">{{good.price}}</span>
           <span class="comments">{{good.comments}}评论</span>
         </div>
@@ -21,9 +21,12 @@
     </ul>
     <img class="footImg" src="https://res.suning.cn/project/cmsWeb/suning/wap/v7/images/snlogo.png?from=mobile" alt="">
   </div>
+
 </template>
 
 <script type="text/ecmascript-6">
+
+
   import {mapState} from 'vuex'
   export default {
     computed:{
@@ -31,7 +34,8 @@
     },
     mounted(){
       this.$store.dispatch('getGoodDetail')
-    }
+    },
+
   }
 </script>
 

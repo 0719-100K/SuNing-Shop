@@ -4,6 +4,8 @@
 export default {
 
   goodDetail:[],//商品详情
+  goodDetail1:{},//商品详情
+  
   mustList:[],//必选
   phonelist:[],//酷机
   items:[],//导航
