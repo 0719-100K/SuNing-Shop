@@ -137,7 +137,7 @@ import Search from '../search/search'
       // 立即选中当前分类项 ===》currentIndex重新计算
       this.scrollY = top
       console.log(top, 'top')
-      this.rightScroll.scrollTo(0, -top,100)
+      this.rightScroll.scrollTo(0, -top,500)
     },
 // 点击跳转
    
