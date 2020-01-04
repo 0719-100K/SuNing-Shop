@@ -178,13 +178,11 @@
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   .wrapper
-    position absolute
-    top 0
-    left 0
     width 100%
     overflow hidden
-    height calc(100vh - 44px)
-    background-color rgb(247, 247, 247) 
+    height calc(100vh - 50px)
+    background-color rgb(247, 247, 247)
+    position relative
     .wrap
       .header
         width 100%
@@ -334,11 +332,10 @@
     .footerImg
       width 100%
       height 45px
-      background-color #333
+      position fixed
+      bottom 50px
+      left 0
       img   
         width 100%
         height 45px
-        position absolute
-        bottom 50px
-        left 0
 </style>
