@@ -177,11 +177,11 @@ import  'swiper/css/swiper.css'
 	},
 		computed: {
 			...mapState(["classList"]),
-					currentItem(){
-				const {scrollX,lefts} = this
-				const index = lefts.findIndex((left,index)=>scrollX>=left && scrollX<lefts[index+1])
-					console.log(scrollX,index)
-			}
+			// 		currentItem(){
+			// 	const {scrollX,lefts} = this
+			// 	const index = lefts.findIndex((left,index)=>scrollX>=left && scrollX<lefts[index+1])
+			// 		console.log(scrollX,index)
+			// }
 		},
 		async mounted(){
 					await  this.$store.dispatch("getClassList")
