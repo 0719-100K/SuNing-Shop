@@ -11,13 +11,22 @@
 </template>
 <script>
 import {CLEARSEARCHLIST} from '../../vuex/mutation_type'
+import { mapState } from 'vuex'
 export default {
   props:['isShow','currentHotWord'],
+  computed: {
+    ...mapState({
+      categorySearchName :state => state.categorySearchName 
+    })
+  },
   data() {
     return {
-      keyWord:''
+      keyWord : this.categorySearchName || ''
     }
   },
+  // mounted() {
+  //   console.log(this.categorySearchName)
+  // },
   methods: {
     goback(){
       this.$router.go(-1)
@@ -35,7 +44,10 @@ export default {
   watch: {
     currentHotWord(newValue){  // 从search组件传来的，检测值的变化，实时更新到状态中
       this.keyWord = newValue
-    }
+    },
+    // categorySearchName(nValue){
+    //   this.keyWord = nValue
+    // }
   },
 }
 </script>

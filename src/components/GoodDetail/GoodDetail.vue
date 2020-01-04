@@ -249,12 +249,12 @@
 
 <script>
 import { mapState } from 'vuex'
-	// name:'goodDetail'
+	
 	// import Swiper from 'swiper'
 	// import 'swiper/css/swiper.css';
 	import {ClEARDETAIL1} from '../../vuex/mutation_type'
 	export default {
-
+		name:'goodDetail',
 		props:['id'],	
 
     computed: {

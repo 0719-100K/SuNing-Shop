@@ -34,9 +34,7 @@
               </hgroup>
               <div class="household-recommend">
                 <ul>
-                  <li v-for="(c,index) in ct.detail" :key="index"
-                   
-                  >
+                  <li v-for="(c,index) in ct.detail" :key="index" @click="categorySearch(c.name)">
                     <div class="neibuLi">
                       <img :src="c.imgUrl" alt="">
                       <div class="backgroundImg"></div>
@@ -57,7 +55,7 @@
 import {mapState} from 'vuex'
 import BScroll from 'better-scroll'
 import Search from '../search/search'
-
+import {SAVECATENAME} from '../../vuex/mutation_type'
 
   export default {
     comments:{
@@ -128,8 +126,8 @@ import Search from '../search/search'
               tops.push(top)
             })
           this.tops = tops
-        // }      
-    },
+      },
+    
 // 点击事件
     clickItem (index) {  
       // 得到top
@@ -140,7 +138,13 @@ import Search from '../search/search'
       this.rightScroll.scrollTo(0, -top,500)
     },
 // 点击跳转
-   
+   categorySearch(name){
+     console.log(name)
+      this.$store.commit(SAVECATENAME,name)
+      this.$router.push('/search')
+      
+      this.$store.dispatch('getSearchList',name)
+    },
   },    
     watch: {
       category() { 

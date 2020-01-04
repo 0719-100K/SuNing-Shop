@@ -17,5 +17,6 @@ export default {
   classList:[],
   data:[],
   user:{},
-  token:localStorage.getItem('token_key') || ''
+  token:localStorage.getItem('token_key') || '',
+  categorySearchName:''
 }

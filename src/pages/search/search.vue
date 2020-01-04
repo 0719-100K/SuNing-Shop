@@ -19,7 +19,7 @@
       <!-- <SearchHeader></SearchHeader> -->
 
       <div class="searchNav">
-        <div class="tab-item" v-for="(navItem,index) in navItems" :key="index" @click="tabClick(index)" :class="{active:currentIndex === index}">{{navItem}}</div>
+        <div class="tab-item" v-for="(navItem,index) in navItems" :key="index" @click="currentIndex = index" :class="{active:currentIndex === index}">{{navItem}}</div>
       </div>
       <div class="navChoice">
         <img src="../../common/images/search.png" alt="">
@@ -72,9 +72,13 @@ import {mapState} from 'vuex'
 export default {
   computed:{
     ...mapState({
-      searchList : state => state.searchList || []
+      searchList : state => state.searchList || [],
+      
     })
   },
+  // mounted() {
+  //   console.log(this.categorySearchName)
+  // },
   data() {
     return {
       currentIndex:0,
@@ -100,10 +104,10 @@ export default {
   },
   methods: {
    
-    tabClick(index){
-      this.currentIndex = index
+    // tabClick(index){
+    //   this.currentIndex = index
       
-    },
+    // },
      // 点击热词---将点击的词存到状态便于头部展示、发送搜索请求
     clickHotSearch(text){
       console.log('111');
