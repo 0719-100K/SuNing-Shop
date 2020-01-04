@@ -202,9 +202,6 @@
               color #222
               max-width 100px
               font-weight 600
-              // overflow hidden
-              // text-overflow ellipsis
-              // white-space nowrap
               margin-bottom 8px
               margin-top 5px
             .phone2
@@ -241,8 +238,9 @@
         box-sizing border-box
         position absolute
         width 94%
+        height 45px
         left 3%
-        bottom -45px
+        bottom -30px
         border-radius 10px
         background white
         line-height 45px
@@ -253,6 +251,7 @@
         .footerImg
           width 45px
           height 30px
+          margin-bottom 14px
           img 
             width 45px
             height 30px
@@ -267,7 +266,7 @@
       left 3%
       box-sizing border-box
       background-color #fff
-      margin 55px 0 10px 0px
+      margin 40px 0 10px 0px
       padding 12px
       border-radius 10px
       .myOrder
