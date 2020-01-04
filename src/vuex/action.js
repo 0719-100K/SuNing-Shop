@@ -80,6 +80,7 @@ async getCategory({commit}){
   }
  },
 
+  //  个人中心的猜你喜欢
   async getGuessLike({commit}){
   let result = await reqGuessLike()
   if(result && result.status === 1){
@@ -88,11 +89,12 @@ async getCategory({commit}){
     commit(REQ_GUESSLIKE,data)
   }
   },
+
+  // 点击热词和输入框输入内容搜索
   async getSearchList({commit},keyword){
     let result = await reqSearchList(keyword)
     if(result.status === 1){
       const data = result.datas.skus
-      console.log(data)
       commit(REQ_SEARCHLIST,data)
     }
   },
@@ -130,6 +132,7 @@ async getCategory({commit}){
       const data = result.datas.blankList
       commit(REQ_RECEIVE_CLASSLIST,data)
     }
-  }
+  },
+
 
 }
