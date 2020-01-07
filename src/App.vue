@@ -13,11 +13,17 @@
 <script>
 import FooterGuider from './components/FooterGuider/NingFooter.vue'
 import {GET_CARTGOODS} from '@/vuex/mutation_type'
+import {mapState} from 'vuex'
 export default {
   name: 'app',
+  computed:{
+    ...mapState(['user','token'])
+  },
   mounted(){
     this.$store.dispatch('autoLogin')
-    this.$store.commit(GET_CARTGOODS)
+    if (this.user && this.token) {
+      this.$store.commit(GET_CARTGOODS)
+    }
   },
   components:{
     FooterGuider,

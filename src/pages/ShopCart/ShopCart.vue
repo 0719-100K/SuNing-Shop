@@ -4,7 +4,7 @@
       <h2>购物车</h2>
       <span v-if="totalCount>0" class="header-right" @click="set = !set">{{set ? '编辑' : '完成'}}</span>
     </div>
-    <div class="content" v-if="totalCount==0">
+    <div class="content" v-if="totalCount==0 || !token">
       <div class="content-top" v-if="!token">
         <span>登陆后同步电脑与手机购物车的商品</span>
         <span class="btn" @click="$router.push('/login')">去登录</span>

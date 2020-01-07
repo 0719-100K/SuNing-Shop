@@ -64,7 +64,7 @@
   export default {
     props:['set'],
     computed:{
-      ...mapState(['cartGoods']),
+      ...mapState(['cartGoods','user','token']),
       ...mapGetters(['totalMoney','totalCount']),
       num(){
         return this.cartGoods.filter((item)=>{

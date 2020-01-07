@@ -27,7 +27,7 @@
         <img v-else class="icon" src="https://image.suning.cn/uimg/cms/img/157105763151658248.png" alt="">
       </span>
       <p>购物车</p>
-      <span class="count" v-show="totalCount>0"><em>{{totalCount}}</em></span>
+      <span class="count" v-show="totalCount>0 && token"><em>{{totalCount}}</em></span>
     </span>
     <span class='footer-item' :class="{on:$route.path==='/profile'}" @click="$router.push(token ? '/profile' : 'login')">
       <span>
