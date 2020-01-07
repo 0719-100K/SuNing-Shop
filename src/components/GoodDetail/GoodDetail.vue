@@ -10,8 +10,8 @@
 						<div class="swiper-slide"><img :src="goodDetail1.pictureUrl" ></div>
 				</div>
 				<!-- 如果需要导航按钮 -->
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
+				<!-- <div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div> -->
 			</div>
 		</header>
 		<div class="section" >
@@ -48,8 +48,6 @@
 				<p class="activity">国际美妆囤货-爆款满300减30> ></p>
 			</div>
 		</div>
-
-
 		<div class="credit" >
 			<img src="../../common/images/oversea-logo.png" alt="">
 			<span class="creditRight">
@@ -240,8 +238,8 @@
 				</div>
 				<router-view></router-view>
 			</div>
-			
 		</div>
+		<Footer :goodInfo="goodDetail1"/>
 	</div>
 
 	
@@ -249,6 +247,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import Footer from './goodDetailFooter'
 	
 	// import Swiper from 'swiper'
 	// import 'swiper/css/swiper.css';
@@ -256,14 +255,18 @@ import { mapState } from 'vuex'
 	export default {
 		name:'goodDetail',
 		props:['id'],	
-
+		components:{
+			Footer
+		},
+		mounted(){
+			this.$store.dispatch('getGoodDetail')
+		},
     computed: {
 
-			// ...mapState(['goodDetail1'])
-			...mapState({
-          goodDetail1: state=>state.goodDetail1 
-			})
-		
+			...mapState(['goodDetail1'])
+			// ...mapState({
+      //     goodDetail1: state=>state.goodDetail1 
+			// }),
 					
 		},
 
@@ -278,8 +281,7 @@ import { mapState } from 'vuex'
 			}
 		},
 		mounted() {
-			 this.$store.dispatch('getGoodDetail1',this.id)
-			 	console.log(this.goodDetail1)
+			this.$store.dispatch('getGoodDetail1',this.id)
 		},
 		methods: {
 			backAndClearDetail1(){

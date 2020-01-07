@@ -25,7 +25,7 @@
       <input v-model="phone" type="text" placeholder="请输入手机号"  maxlength="11" v-show="!isPwdLogin">
       <div class="yanzheng" v-show="!isPwdLogin">
         <!-- <button :disabled="!isRightPhone || count>0" :class="{'yzm-active':phone.length === 11}" @click.prevent="sendCode()"> -->
-        <button :disabled="count>0" :class="{'yzm-active':phone.length === 11}" @click.prevent="sendCode()">
+        <button :disabled="count>0" :class="{'yzm-active':phone.length === 11}" @click.prevent="sendCode">
           {{count > 0 ? count + 's' : '获取验证码'}}
         </button>
         <label class="label" for="yzmCode">
@@ -91,10 +91,7 @@
       }
     },
     computed:{
-      // 是否是一个正确的手机号
-      isRightPhone () {
-        return /^1\d{10}$/.test(this.phone)
-      },
+      
 
       //input框中提示语
       placeholder(){
@@ -106,6 +103,10 @@
       }
     },
     methods:{
+      // // 是否是一个正确的手机号
+      // isRightPhone () {
+      //   return /^1\d{10}$/.test(this.phone)
+      // },
       // 展示密码登录
       showPwdLogin(){
         this.isPwdLogin = !this.isPwdLogin
@@ -128,6 +129,7 @@
           Toast('格式不正确,请您输入正确的手机号!',{
             className:'toast'
           })
+          return 
         }else {
           this.count = 60
           this.timeId = setInterval(() => {
@@ -250,6 +252,7 @@
         img 
           width 100%
           height 100%
+        z-index 90
 
         // 验证码登录
       .yanzheng

@@ -27,7 +27,7 @@
         <img v-else class="icon" src="https://image.suning.cn/uimg/cms/img/157105763151658248.png" alt="">
       </span>
       <p>购物车</p>
-      <span class="count" v-show="count>0"><em>{{count}}</em></span>
+      <span class="count" v-show="totalCount>0 && token"><em>{{totalCount}}</em></span>
     </span>
     <span class='footer-item' :class="{on:$route.path==='/profile'}" @click="$router.push(token ? '/profile' : 'login')">
       <span>
@@ -41,7 +41,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import { mapState } from 'vuex'
+  import { mapState, mapGetters } from 'vuex'
   export default {
     data(){
       return {
@@ -49,14 +49,16 @@
       }
     },
     computed:{
-      ...mapState(['token'])
+      ...mapState(['token','cartGoods']),
+      ...mapGetters(['totalCount'])
     },
     methods:{
       goto(path){
         if (path!==this.$route.path) {
           this.$router.push(path)
         }else{
-          window.location = path
+          return
+          // window.location = path
         }
       }
     }

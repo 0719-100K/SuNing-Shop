@@ -1,4 +1,4 @@
-
+import {getCartGoods} from '@/utils'
 import {
   SAVE_GOODS,
   REQ_BUYLIST,
@@ -20,14 +20,65 @@ import {
   REQ_DETAIL,
   ClEARDETAIL1,
   SAVECATENAME,
+  ADD_GOODCOUNT,
+  REDUCE_GOODCOUNT,
+  SET_GOODACTIVE,
+  SET_ALL,
+  CLEAR_CHECK,
+  GET_CARTGOODS
 } from './mutation_type'
+import Vue from 'vue'
 
 export default {
+
+  [ADD_GOODCOUNT](state,good){
+    if (state.cartGoods.length > 0) {
+      let result = state.cartGoods.find((item)=>{
+        return item.id === good.id
+      })
+      if (result) {
+        good = result
+      }
+    }
+    if (good.count) {
+      good.count++
+    }else{
+      Vue.set(good,'count',1)
+      Vue.set(good,'active',false)
+      state.cartGoods.push(good)
+    }
+  },
+  [REDUCE_GOODCOUNT](state,good){
+    if (good.count>0) {
+      good.count--
+      if (good.count === 0) {
+        state.cartGoods.splice(state.cartGoods.indexOf(good),1)
+      }
+    }
+  },
+  [SET_GOODACTIVE](state,index){
+    state.cartGoods[index].active = !state.cartGoods[index].active
+  },
+  [SET_ALL](state){
+    state.cartGoods = state.cartGoods.map((item)=>{
+      item.active = true
+      return item
+    })
+  },
+  [GET_CARTGOODS](state){
+    state.cartGoods = getCartGoods()
+  },
+  [CLEAR_CHECK](state){
+    console.log('bbbb');
+    state.cartGoods = state.cartGoods.filter((item)=>{
+      return item.active !== true
+    })
+  },
   [SAVE_GOODS](state,goodDetail){
     state.goodDetail = goodDetail
   },
   [REQ_BUYLIST](state,mustList){
-    state.mustList = mustList 
+    state.mustList = mustList
   },
   // 必买清单详情
   [REQ_DETAIL](state,obj1){
