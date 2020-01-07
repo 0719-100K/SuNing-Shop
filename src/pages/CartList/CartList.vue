@@ -1,21 +1,16 @@
 <template>
   <div class="cartlistContainer">
-    <!-- 头部 -->
-    <div class="header">
-      <span class="title">购物车</span>
-      <span class="editor">编辑</span>
-    </div>
     <!-- 主体 -->
-    <div class="contentContainer">
+    <div class="contentContainer" v-for="(item,index) in cartGoods" :key="item.id" @click="$router.push(`/home/gooddetail/${item.id}`)">
       <div class="content">
         <!-- 商家名 -->
         <div class="shop">
-          <div class="select"></div>
+          <div class="select" @click.stop="isBg(index)" :class={active:item.active}>✔</div>
           <div class="shop-icon">
             <img src="./images/cshop.png" alt="">
           </div>
           <div class="shop-name">
-            <span>南极人家纺旗舰店</span>
+            <span>苏宁自营官方店</span>
             <span> > </span>
           </div>
           <div class="juan">
@@ -25,63 +20,101 @@
         <!-- 商品 -->
         <div class="goods">
           <div class="selectContainer">
-            <div class="select"></div>
+            <div class="select" @click.stop="isBg(index)" :class={active:item.active}>✔</div>
           </div>
           <div class="shop-img">
-            <img src="./images/shopImg.jpg" alt="">
+            <img :src="item.pictureUrl" alt="">
           </div>
           <div class="detailContainer">
             <div class="shop-detail">
-              <span>南极人(NanJiren)家纺 简约全棉四件套床上用品纯棉斜纹双人被套床单式...</span>
+              <span>{{item.sugGoodsName}}</span>
             </div>
             <div class="shop-size">
               <span>1.5m/1.8m床通用</span>
             </div>
             <div class="detail-footer">
               <div class="shop-price">
-                <span>￥ 129.00</span>
+                <span>￥ {{item.price}}</span>
               </div>
               <div class="shop-count">
-                <div class="jian"> - </div>
-                <div class="count">2</div>
-                <div class="add"> + </div>
+                <div class="jian" @click.stop="addOrReduce(false,item)"> - </div>
+                <div class="count">{{item.count}}</div>
+                <div class="add" @click.stop="addOrReduce(true,item)"> + </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="footer">
+      <div class="footer-left">
+        <div :class="num*1 === cartGoods.length? 'select active' : 'select'" @click.stop="settingAll">✔</div>
+        <div class="all">全部</div>
+      </div>
+      <div class="footer-center">{{set ? `合计：￥${totalMoney}` : ''}}</div>
+      <div class="footer-right" @click.stop="clearCheck">{{set ? `去结算(${all})` : '删除'}}</div>
+    </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+  import {mapState,mapGetters} from 'vuex'
+  import {CLEAR_CHECK} from '@/vuex/mutation_type'
+  import {saveCart} from '@/utils'
   export default {
+    props:['set'],
+    computed:{
+      ...mapState(['cartGoods']),
+      ...mapGetters(['totalMoney','totalCount']),
+      num(){
+        return this.cartGoods.filter((item)=>{
+          return item.active === true
+        }).length
+      },
+      all(){
+        let cart = this.cartGoods.filter((item)=>{
+          return item.active === true
+        })
+        return cart.reduce((pre, good) => pre + good.count, 0) 
+      }
+    },
+    beforeDestroy(){
+      this.$store.dispatch('clearGoodDetail1')
+    },
+    beforeDestroy(){
+      let {cartGoods} = this
+      saveCart(cartGoods)
+    },
+    methods:{
+      addOrReduce(isAdd,good){
+        this.$store.dispatch('setCartGood',{isAdd,good})
+        let {cartGoods} = this
+        saveCart(cartGoods)
+      },
+      isBg(index){
+        this.$store.dispatch('setActive',index)
+        let {cartGoods} = this
+        saveCart(cartGoods)
+      },
+      settingAll(){
+        this.$store.dispatch('setAll')
+        let {cartGoods} = this
+        saveCart(cartGoods)
+      },
+      clearCheck(){
+        if (!this.set) {
+          console.log('aaa');
+          this.$store.commit(CLEAR_CHECK)
+          let {cartGoods} = this
+          saveCart(cartGoods)
+        }
+      }
+    }
   }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   .cartlistContainer
-    // 头部
-    .header
-      height 44px
-      position relative
-      background #ffffff
-      .title
-        font-size 17px
-        color #222222
-        display inline-block
-        line-height 44px
-        position absolute
-        left 50%
-        margin-left -25px
-      .editor
-        font-size 14px
-        color #3377ff
-        padding-right 12px
-        line-height 44px
-        position absolute
-        right 0
-
     // 主体
     .contentContainer
       height 190px
@@ -99,6 +132,8 @@
           display flex
           position relative
           .select
+            line-height 18px
+            text-align center
             display inline-block
             width 18px
             height 18px
@@ -135,6 +170,8 @@
             float left
             margin-left 6px
             .select
+              line-height 18px
+              text-align center
               width 18px
               height 18px
               border 1px solid #ccc
@@ -205,6 +242,50 @@
                   text-align center
                   line-height 21px
                   background-color #f2f2f2
-
- 
+      
+    .footer
+      padding 0 12px
+      width 100%
+      height 37px
+      line-height 37px
+      background-color #ffffff
+      position fixed
+      bottom 50px
+      left 0
+      display flex
+      .footer-left
+        width 60px
+        display flex
+        .select
+          line-height 18px
+          text-align center
+          width 18px
+          height 18px
+          border 1px solid #ccc
+          margin-right 5px
+          margin-top 8px
+          border-radius 50% 
+        .all
+          font-size 14px
+          color #000
+      .footer-center
+        width 190px
+        padding-right 4px
+        font-size 14px
+        font-weight bold
+        text-align right
+        color red
+      .footer-right
+        width 99px
+        height 33px
+        margin-top 2px
+        background-color #fc0
+        border-radius 5px
+        text-align center
+        line-height 33px
+        font-size 14px
+        color #222
+    .active
+        background-color #FFCC00 
+        color #fff
 </style>

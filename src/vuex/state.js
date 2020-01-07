@@ -19,5 +19,6 @@ export default {
   data:[],
   user:{},
   token:localStorage.getItem('token_key') || '',
-  categorySearchName:''
+  categorySearchName:'',
+  cartGoods:[]
 }

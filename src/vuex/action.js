@@ -14,9 +14,11 @@ import {
   RESET_TOKEN,
   RESET_USER,
   SAVE_GOODSDETAIL,
-  REQ_DETAIL
-
-  
+  REQ_DETAIL,
+  ADD_GOODCOUNT,
+  REDUCE_GOODCOUNT,
+  SET_GOODACTIVE,
+  SET_ALL
 }
  from './mutation_type'
 import {
@@ -33,6 +35,19 @@ import {
 } from '../api/index'
 
 export default{
+  setCartGood({commit},{isAdd,good}){
+    if (isAdd) {
+      commit(ADD_GOODCOUNT,good)
+    }else{
+      commit(REDUCE_GOODCOUNT,good)
+    }
+  },
+  setActive({commit},index){
+    commit(SET_GOODACTIVE,index)
+  },
+  setAll({commit}){
+    commit(SET_ALL)
+  },
   // 商品详情
   async getGoodDetail({commit}){
     let result = await reqGoods()
@@ -49,9 +64,12 @@ export default{
       let obj = goodDetail2.find( item=> item.id == id)
       commit(SAVE_GOODSDETAIL,obj)
 
-      console.log(goodDetail2)
-      console.log(obj)
+      // console.log(goodDetail2)
+      // console.log(obj)
     }
+  },
+  clearGoodDetail1({commit}){
+    commit(SAVE_GOODSDETAIL,{})
   },
   // 详情
   async getSelectDetail({commit},id){

@@ -2,8 +2,9 @@
   <div id="shop-cart">
     <div class="header">
       <h2>购物车</h2>
+      <span v-if="totalCount>0" class="header-right" @click="set = !set">{{set ? '编辑' : '完成'}}</span>
     </div>
-    <div class="content">
+    <div class="content" v-if="totalCount==0">
       <div class="content-top" v-if="!token">
         <span>登陆后同步电脑与手机购物车的商品</span>
         <span class="btn" @click="$router.push('/login')">去登录</span>
@@ -13,6 +14,9 @@
         <p class="text">购物车还是空的，快来挑选好货吧</p>
         <p class="gobuy" @click="$router.replace('/home')">去逛逛</p>
       </div>
+    </div>
+    <div v-else>
+      <CartList :set="set"/>
     </div>
     <div class="like">
       <div class="like-header">
@@ -43,17 +47,30 @@
 
 <script type="text/ecmascript-6">
   import {reqGoods} from '@/api'
-  import {mapState} from 'vuex'
+  import {mapState,mapGetters} from 'vuex'
+  import CartList from '../CartList/CartList'
+  import {saveCart} from '@/utils'
   export default {
     data(){
       return {
-        goods:[]
+        goods:[],
+        Goods:[],
+        set:true
       }
     },
+    beforeDestroy(){
+      let {cartGoods} = this
+      saveCart(cartGoods)
+    },
+    components:{
+      CartList
+    },
     computed:{
-      ...mapState(['token'])
+      ...mapState(['token','cartGoods']),
+      ...mapGetters(['totalCount'])
     },
     async mounted(){
+      this.Goods = this.cartGoods
       let result = await reqGoods()
       if (result.status === 1) {
         console.log(result)
@@ -77,6 +94,14 @@
       color #222222
       line-height 44px
       background-color #fff
+      h2
+        display inline-block
+      .header-right
+        float right
+        font-size 14px
+        color #37f
+        text-align right 
+        margin-right 12px
     .content
       padding 12px
       height 300px

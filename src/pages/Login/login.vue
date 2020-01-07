@@ -22,8 +22,7 @@
       </div>
 
       <!-- 验证码登录 -->
-      <input v-model="phone" type="text" placeholder="请输入手机号"  maxlength="11" v-show="!isPwdLogin" name="phone" v-validate="'required|mobile'">
-      <span class="phoneError" style="color: red;" v-show="errors.has('phone')">{{ errors.first('phone') }}</span>
+      <input v-model="phone" type="text" placeholder="请输入手机号"  maxlength="11" v-show="!isPwdLogin">
       <div class="yanzheng" v-show="!isPwdLogin">
         <!-- <button :disabled="!isRightPhone || count>0" :class="{'yzm-active':phone.length === 11}" @click.prevent="sendCode()"> -->
         <button :disabled="count>0" :class="{'yzm-active':phone.length === 11}" @click.prevent="sendCode">
