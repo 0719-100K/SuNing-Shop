@@ -103,7 +103,6 @@
       },
       clearCheck(){
         if (!this.set) {
-          console.log('aaa');
           this.$store.commit(CLEAR_CHECK)
           let {cartGoods} = this
           saveCart(cartGoods)

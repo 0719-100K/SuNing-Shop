@@ -9,7 +9,7 @@
       </li>
       <li class="pic" @click="user && token ? $router.replace('/shopcart') : $router.push('/login')">
         <img src="https://res.suning.cn/project/pdsWeb/wapV3/style/images/action-cart.png?v=20190821" alt="">
-        <span class="count" v-if="totalCount>0">{{totalCount}}</span>
+        <span class="count" v-if="totalCount>0 && token">{{totalCount}}</span>
       </li>
       <li class="left">
         <p>马上抢</p>
@@ -33,9 +33,13 @@
     },
     methods:{
       addGood(){
-        this.$store.dispatch('setCartGood',{isAdd:true,good:this.goodInfo})
-        let {cartGoods} = this
-        saveCart(cartGoods)
+        if (this.user && this.token) {
+          this.$store.dispatch('setCartGood',{isAdd:true,good:this.goodInfo})
+          let {cartGoods} = this
+          saveCart(cartGoods)
+        }else{
+          this.$router.push('/login')
+        }
       }
     },
     beforeDestroy(){
