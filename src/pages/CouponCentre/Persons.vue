@@ -4,7 +4,7 @@
     <!-- 头部导航 -->
     <div class="header">
       <div class="inner">
-        <div class="navLeft" @click="backCentre">
+        <div class="navLeft" @click="$router.push('/home/centre')">
             <svg t="1577958002640" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1987" width="200" height="200"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8c-16.4 12.8-16.4 37.5 0 50.3l450.8 352.1c5.3 4.1 12.9 0.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z" fill="#ffffff" p-id="1988"></path></svg>
         </div>
         <div class="navCenter">
@@ -43,7 +43,7 @@
         </div>
         <div class="firstText">暂无优惠券</div>
         <div class="twoText">您还没有此类优惠券,请到领券中心看看</div>
-        <div class="threeText">去领券中心</div>
+        <div class="threeText" @click="$router.push('/home/centre')">去领券中心</div>
       </div>
     </div>
   </div>
@@ -57,11 +57,11 @@ import Vue from 'vue'
         
       }
     },
-    methods: {
-      backCentre(){
-				this.$router.push('/home/centre')
-			},
-    },
+    // methods: {
+    //   backCentre(){
+		// 		this.$router.push('/home/centre')
+		// 	},
+    // },
   }
 </script>
 

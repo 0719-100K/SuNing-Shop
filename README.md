@@ -11,7 +11,7 @@
       path：'',
       component:'imgs'   此处应该写redirect
 
-# 从本地取出图片遍历时，需要再数据中的路径前面套上require，否则虽然路径是对的，但是取不到
+# 从本地取出图片遍历时，需要在数据中的路径前面套上require，否则虽然路径是对的，但是取不到
       orderLists:[
           {id:1,text:'待支付',url:require('../../common/images/profile/order-icon01.png')},
           {id:2,text:'待发货',url:require('../../common/images/profile/order-icon02.png')},

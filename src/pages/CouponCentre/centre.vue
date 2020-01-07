@@ -16,7 +16,7 @@
 				  v-show="isShow" 
 					 class="search"
 					 >
-					<input @click="toSearch"  type="text" placeholder="搜索">
+					<input type="text" placeholder="搜索">
 					<ul class="searchList" >
 						<li
 						 v-for="(ListItem, index) in navList" :key="index"
@@ -238,9 +238,9 @@ import  'swiper/css/swiper.css'
             return obj
 			},
 			//点击搜索中input去search
-			toSearch(){
-				this.$router.push('/search')
-			}
+			// toSearch(){
+			// 	this.$router.push('/search')
+			// }
   }
 }
 </script>
