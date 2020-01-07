@@ -30,11 +30,8 @@ export default {
   },
   methods: {
     goback(){
-      // this.$router.push('/home')
       this.$router.go(-1)
-      // if (this.$route.path === '') {
-        
-      // }
+      
       this.$store.commit(CLEARSEARCHLIST)
       this.keyWord =''
     },
