@@ -133,6 +133,10 @@
         this.initScroll()
       }
     },
+    beforeDestroy(){
+      let scrolly = this.scrolly
+      localStorage.setItem('scroll',scrolly)
+    },
     methods:{
       async initCate(){
         let result = await reqHomeCategory()
@@ -152,6 +156,12 @@
           this.homeScroll.on('scroll',({x,y})=>{
             this.scrolly = Math.abs(y)
           })
+          let y = localStorage.getItem('scroll')
+          if (y>0) {
+            console.log('aaaaaaaaaaa');
+            this.homeScroll.scrollTo(0,-y,0)
+            this.scrolly = y
+          }
         }else{
           console.log('ref');
           this.homeScroll.refresh()

@@ -23,7 +23,7 @@
         <img src="//oss.suning.com/vss/activity/wximg/cart/guess-you-like.png" alt="">
       </div>
       <ul class="goods">
-        <li v-for="(good,index) in goods.slice(10,20)" :key="index">
+        <li v-for="(good,index) in goods.slice(10,20)" :key="index" @click="$router.push(`/home/gooddetail/${good.id}`)">
           <img  :src="good.pictureUrl" alt="">
           <p class="des">{{good.sugGoodsName}}</p>
           <div class="btns">
@@ -70,6 +70,7 @@
       ...mapGetters(['totalCount'])
     },
     async mounted(){
+      this.$store.dispatch('getGoodDetail')
       this.Goods = this.cartGoods
       let result = await reqGoods()
       if (result.status === 1) {
@@ -82,6 +83,7 @@
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   #shop-cart
+    overflow hidden
     width 100%
     margin-bottom 44px
     background-color #f5f5f9

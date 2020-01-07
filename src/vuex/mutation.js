@@ -60,6 +60,14 @@ export default {
     state.cartGoods[index].active = !state.cartGoods[index].active
   },
   [SET_ALL](state){
+    let cart = state.cartGoods.reduce((pre, good) => pre + (good.active ? 1 : 0), 0)
+    if (cart === state.cartGoods.length) {
+      state.cartGoods = state.cartGoods.map((item)=>{
+        item.active = false
+        return item
+      })
+      return
+    }
     state.cartGoods = state.cartGoods.map((item)=>{
       item.active = true
       return item

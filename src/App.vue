@@ -20,6 +20,7 @@ export default {
     ...mapState(['user','token'])
   },
   mounted(){
+    localStorage.setItem('scroll',0)
     this.$store.dispatch('autoLogin')
     if (this.user && this.token) {
       this.$store.commit(GET_CARTGOODS)

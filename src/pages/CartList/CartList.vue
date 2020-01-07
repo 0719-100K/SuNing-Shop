@@ -5,7 +5,7 @@
       <div class="content">
         <!-- 商家名 -->
         <div class="shop">
-          <div class="select" @click.stop="isBg(index)" :class={active:item.active}>✔</div>
+          <div class="select" @click.stop="isBg(index)" :class={active:item.active}>{{item.active ? '✔' : ''}}</div>
           <div class="shop-icon">
             <img src="./images/cshop.png" alt="">
           </div>
@@ -20,7 +20,7 @@
         <!-- 商品 -->
         <div class="goods">
           <div class="selectContainer">
-            <div class="select" @click.stop="isBg(index)" :class={active:item.active}>✔</div>
+            <div class="select" @click.stop="isBg(index)" :class={active:item.active}>{{item.active ? '✔' : ''}}</div>
           </div>
           <div class="shop-img">
             <img :src="item.pictureUrl" alt="">
@@ -48,7 +48,7 @@
     </div>
     <div class="footer">
       <div class="footer-left">
-        <div :class="num*1 === cartGoods.length? 'select active' : 'select'" @click.stop="settingAll">✔</div>
+        <div :class="num === cartGoods.length ? 'select active' : 'select'" @click.stop="settingAll">{{num === cartGoods.length ? '✔' : ''}}</div>
         <div class="all">全部</div>
       </div>
       <div class="footer-center">{{set ? `合计：￥${totalMoney}` : ''}}</div>

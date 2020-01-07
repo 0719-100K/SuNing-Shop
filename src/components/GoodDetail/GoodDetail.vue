@@ -1,5 +1,5 @@
 <template>
-	<div id="detailContainer" >
+	<div id="detailContainer" ref='wrap'>
 		<header class="pageHeader" >
 			<div class="imgContainer">
 				<img src="../../common/images/nav-back.png" alt="" @click="backAndClearDetail1">
@@ -254,7 +254,7 @@ import Footer from './goodDetailFooter'
 	import {ClEARDETAIL1} from '../../vuex/mutation_type'
 	export default {
 		name:'goodDetail',
-		props:['id'],	
+		props:['id'],
 		components:{
 			Footer
 		},
@@ -304,6 +304,7 @@ import Footer from './goodDetailFooter'
 <style  scoped lang="stylus">
 @import '../../common/stylus/mixins.styl'
 #detailContainer
+	overflow hidden
 	width 100%
 	height 100%
 	background-color rgb(242,242,242)
